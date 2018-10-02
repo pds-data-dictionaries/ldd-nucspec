@@ -158,9 +158,9 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Class>
-    <name>GRNS_Observation</name>
+    <name>GRNS_Observation_Properties</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.GRNS_Observation</local_identifier>
+    <local_identifier>grns.GRNS_Observation_Properties</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>This class specifies properties pertaining to a gamme ray and nuclear spectroscopy observation.</definition>
     <DD_Association>
@@ -218,13 +218,13 @@
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.Observation_Global_Parameters</identifier_reference>
+      <identifier_reference>grns.Global_Parameters</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences/>
       <maximum_occurrences/>
       <DD_Class_Reference>
         <namespace_id/>
-        <name>Observation_Global_Parameters</name>
+        <name>Global_Parameters</name>
       </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
@@ -454,9 +454,9 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    <name>Observation_Global_Parameters</name>
+    <name>Global_Parameters</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Observation_Global_Parameters</local_identifier>
+    <local_identifier>grns.Global_Parameters</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Allows specification of selected instrument settings, such as accumulation time and high voltage.</definition>
     <DD_Association>
