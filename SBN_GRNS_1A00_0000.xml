@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A00.xsd">
+  <name>GRNS</name>
+  <ldd_version_id>0.0.0.0</ldd_version_id>
+  <full_name>Small Bodies Node</full_name>
+  <steward_id>sbn</steward_id>
+  <namespace_id>grns</namespace_id>
+  <comment>This dictionary covers nuclear spectroscopy observations.</comment>
+  <last_modification_date_time>2018-10-02T16:38:23Z</last_modification_date_time>
+  <DD_Attribute>
+    <name>coefficient</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.coefficient</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>A coefficient of the polynomial relating channel number to pulse height: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height and x is channel number. Note that labels must include a complete list of coefficients and these must be presented increasing order.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>order</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.order</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The order of the polynomial. For a second order polynomial (polynomial_order = 2), pulse height is given by H(x) = a0 + a1 x + a2 x^2, where H is pulse height and x is channel number.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>state_index</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.state_index</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>first_record</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.first_record</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The first record for which the state applies</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>last_record</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.last_record</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The last record for which this state applies</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>record_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.record_count</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The number of consecutive records after the first for which this state applies.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>scet_start</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.scet_start</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Spacecraft event time in seconds past J2000 for the first science data record for a block of records with the same state.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>scet_stop</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.scet_stop</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Spacecraft event time in seconds past J2000 for the last science data record for a block of records with the same state.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>param_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.param_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The name of the parameter</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>UTF8_Short_String_Collapsed</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>param_value</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.param_value</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The value of the parameter</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>UTF8_Short_String_Collapsed</value_data_type>
+      <minimum_value/>
+      <maximum_value/>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Class>
+    <name>GRNS_Observation</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.GRNS_Observation</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>This class defines a single nuclear spectroscopy observation.</definition>
+    <DD_Association>
+      <identifier_reference>grns.Energy_Calibration</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Energy_Calibration</name>
+      </DD_Class_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.Instrument Settings</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Instrument Settings</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Energy_Calibration</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Energy_Calibration</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Specifies methods and data used to determine the pulse height in energy units (e.g. MeV) for each channel of a pulse height spectrum.</definition>
+    <DD_Association>
+      <identifier_reference>grns.Polynomial</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Polynomial</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Instrument Settings</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Instrument Settings</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>This class specifies instrument settings. Two options are provided: 1) Look up table for instrument states; 2) Specific "generic" settings such as high voltage and science accumulation interval. For more detailed instrument-specific information, definitions must be added to the mission dictionary.</definition>
+    <DD_Association>
+      <identifier_reference>grns.State_Table</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>State_Table</name>
+      </DD_Class_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.Observation_Global_Parameters</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences/>
+      <maximum_occurrences/>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Observation_Global_Parameters</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Polynomial</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Polynomial</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The pulse height in energy units (e.g. MeV) is determined given channel number using a polynomial: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height with energy units and x is channel number.</definition>
+    <DD_Association>
+      <identifier_reference>grns.Polynomial_Term</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Polynomial_Term</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Polynomial_Term</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Polynomial_Term</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Describes a single term in the polynomial function.</definition>
+    <DD_Association>
+      <identifier_reference>grns.coefficient</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>coefficient</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.order</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>order</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>State_Table</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.State_Table</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
+    <DD_Association>
+      <identifier_reference>pds.Internal_Reference</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Internal_Reference</name>
+      </DD_Class_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.State_Table_Entry</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>State_Table_Entry</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Internal_Reference</name>
+    <version_id>1.0</version_id>
+    <local_identifier>pds.Internal_Reference</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The logical identifier of the state tabke</definition>
+  </DD_Class>
+  <DD_Class>
+    <name>State_Table_Entry</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.State_Table_Entry</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Links records in the state table with records in the data product</definition>
+    <DD_Association>
+      <identifier_reference>grns.state_index</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>state_index</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.Applicable_Records</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Applicable_Records</name>
+      </DD_Class_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.State_Time</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>State_Time</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Applicable_Records</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Applicable_Records</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The records to which this state applies</definition>
+    <DD_Association>
+      <identifier_reference>grns.First_Last</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>First_Last</name>
+      </DD_Class_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.First_Count</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>First_Count</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>State_Time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.State_Time</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The time during which this state was applicable</definition>
+    <DD_Association>
+      <identifier_reference>grns.scet_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>scet_start</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.scet_stop</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>scet_stop</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>First_Last</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.First_Last</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Defines the first and last records for which this state applies.</definition>
+    <DD_Association>
+      <identifier_reference>grns.first_record</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>first_record</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.last_record</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>last_record</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>First_Count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.First_Count</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Defines the records to which this state applies by identifying the first record, and the number of following records.</definition>
+    <DD_Association>
+      <identifier_reference>grns.first_record</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences/>
+      <maximum_occurrences/>
+      <DD_Class_Reference>
+        <namespace_id>grns</namespace_id>
+        <name>first_record</name>
+      </DD_Class_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.record_count</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>record_count</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Observation_Global_Parameters</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Observation_Global_Parameters</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Allows specification of selected instrument settings, such as accumulation time and high voltage.</definition>
+    <DD_Association>
+      <identifier_reference>grns.Parameter</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+      <DD_Class_Reference>
+        <namespace_id/>
+        <name>Parameter</name>
+      </DD_Class_Reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Parameter</name>
+    <version_id>1.0</version_id>
+    <local_identifier>grns.Parameter</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>A single parameter which applies to the entire observation</definition>
+    <DD_Association>
+      <identifier_reference>grns.param_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>param_name</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>grns.param_value</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <DD_Attribute_Reference>
+        <namespace_id/>
+        <name>param_value</name>
+      </DD_Attribute_Reference>
+    </DD_Association>
+  </DD_Class>
+</Ingest_LDD>
