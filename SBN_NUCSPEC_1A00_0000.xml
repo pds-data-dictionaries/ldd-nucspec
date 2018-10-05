@@ -4,9 +4,9 @@
   <ldd_version_id>0.0.0.0</ldd_version_id>
   <full_name>Small Bodies Node</full_name>
   <steward_id>sbn</steward_id>
-  <namespace_id>grns</namespace_id>
-  <comment>This dictionary covers gamma ray and nuclear spectroscopy observations.</comment>
-  <last_modification_date_time>2018-10-02T16:45:07Z</last_modification_date_time>
+  <namespace_id>nucspec</namespace_id>
+  <comment>This dictionary covers nuclear spectroscopy observations.</comment>
+  <last_modification_date_time>2018-10-05T20:28:42Z</last_modification_date_time>
   <DD_Attribute>
     <name>coefficient</name>
     <version_id>1.0</version_id>
@@ -162,7 +162,7 @@
     <version_id>1.0</version_id>
     <local_identifier>grns.GRNS_Observation_Properties</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>This class specifies properties pertaining to a gamme ray and nuclear spectroscopy observation.</definition>
+    <definition>This class specifies properties pertaining to a nuclear spectroscopy observation.</definition>
     <DD_Association>
       <identifier_reference>grns.Energy_Calibration</identifier_reference>
       <reference_type>component_of</reference_type>
