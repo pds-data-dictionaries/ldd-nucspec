@@ -163,6 +163,7 @@
     <local_identifier>grns.GRNS_Observation_Properties</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>This class specifies properties pertaining to a nuclear spectroscopy observation.</definition>
+    <element_flag>true</element_flag>
     <DD_Association>
       <identifier_reference>grns.Energy_Calibration</identifier_reference>
       <reference_type>component_of</reference_type>
