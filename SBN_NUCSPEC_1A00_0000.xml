@@ -158,9 +158,9 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Class>
-    <name>GRNS_Observation_Properties</name>
+    <name>NucSpec_Observation_Properties</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.GRNS_Observation_Properties</local_identifier>
+    <local_identifier>nucspec.NucSpec_Observation_Properties</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>This class specifies properties pertaining to a nuclear spectroscopy observation.</definition>
     <element_flag>true</element_flag>
