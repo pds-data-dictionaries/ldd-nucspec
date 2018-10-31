@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A00.xsd">
-  <name>GRNS</name>
+  <name>nucspec</name>
   <ldd_version_id>0.0.0.0</ldd_version_id>
   <full_name>Small Bodies Node</full_name>
   <steward_id>sbn</steward_id>
@@ -10,7 +10,7 @@
   <DD_Attribute>
     <name>coefficient</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.coefficient</local_identifier>
+    <local_identifier>nucspec.coefficient</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The coefficient of a single term of the polynomial relating channel number to pulse height.</definition>
@@ -25,7 +25,7 @@
   <DD_Attribute>
     <name>order</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.order</local_identifier>
+    <local_identifier>nucspec.order</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The order of a single term of the polynomial relating channel number to pulse height.</definition>
@@ -40,7 +40,7 @@
   <DD_Attribute>
     <name>state_index</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.state_index</local_identifier>
+    <local_identifier>nucspec.state_index</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
@@ -55,7 +55,7 @@
   <DD_Attribute>
     <name>first_record</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.first_record</local_identifier>
+    <local_identifier>nucspec.first_record</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The first record for which the state applies, inclusive</definition>
@@ -70,7 +70,7 @@
   <DD_Attribute>
     <name>last_record</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.last_record</local_identifier>
+    <local_identifier>nucspec.last_record</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The last record for which this state applies, inclusive</definition>
@@ -85,7 +85,7 @@
   <DD_Attribute>
     <name>record_count</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.record_count</local_identifier>
+    <local_identifier>nucspec.record_count</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The number of consecutive records, including the first, for which this state applies.</definition>
@@ -100,7 +100,7 @@
   <DD_Attribute>
     <name>scet_start</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.scet_start</local_identifier>
+    <local_identifier>nucspec.scet_start</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft event time in seconds past J2000 for the first science data record for a block of records with the same state.</definition>
@@ -115,7 +115,7 @@
   <DD_Attribute>
     <name>scet_stop</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.scet_stop</local_identifier>
+    <local_identifier>nucspec.scet_stop</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft event time in seconds past J2000 for the last science data record for a block of records with the same state.</definition>
@@ -130,7 +130,7 @@
   <DD_Attribute>
     <name>param_name</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.param_name</local_identifier>
+    <local_identifier>nucspec.param_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The name of the parameter</definition>
@@ -145,7 +145,7 @@
   <DD_Attribute>
     <name>param_value</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.param_value</local_identifier>
+    <local_identifier>nucspec.param_value</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The value of the parameter</definition>
@@ -158,13 +158,14 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Class>
-    <name>GRNS_Observation_Properties</name>
+    <name>NucSpec_Observation_Properties</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.GRNS_Observation_Properties</local_identifier>
+    <local_identifier>nucspec.NucSpec_Observation_Properties</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>This class specifies properties pertaining to a nuclear spectroscopy observation.</definition>
+    <element_flag>true</element_flag>
     <DD_Association>
-      <identifier_reference>grns.Energy_Calibration</identifier_reference>
+      <identifier_reference>nucspec.Energy_Calibration</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -174,7 +175,7 @@
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.Instrument Settings</identifier_reference>
+      <identifier_reference>nucspec.Instrument Settings</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -187,11 +188,11 @@
   <DD_Class>
     <name>Energy_Calibration</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Energy_Calibration</local_identifier>
+    <local_identifier>nucspec.Energy_Calibration</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Specifies methods and data used to determine the pulse height in energy units (e.g. MeV) for each channel of a pulse height spectrum.</definition>
     <DD_Association>
-      <identifier_reference>grns.Polynomial</identifier_reference>
+      <identifier_reference>nucspec.Polynomial</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -204,11 +205,11 @@
   <DD_Class>
     <name>Instrument Settings</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Instrument Settings</local_identifier>
+    <local_identifier>nucspec.Instrument Settings</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>This class specifies instrument settings. Two options are provided: 1) Look up table for instrument states; 2) Specific "generic" settings such as high voltage and science accumulation interval. For more detailed instrument-specific information, definitions must be added to the mission dictionary.</definition>
     <DD_Association>
-      <identifier_reference>grns.State_Table</identifier_reference>
+      <identifier_reference>nucspec.State_Table</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -218,7 +219,7 @@
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.Global_Parameters</identifier_reference>
+      <identifier_reference>nucspec.Global_Parameters</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences/>
       <maximum_occurrences/>
@@ -231,11 +232,11 @@
   <DD_Class>
     <name>Polynomial</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Polynomial</local_identifier>
+    <local_identifier>nucspec.Polynomial</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The pulse height in energy units (e.g. MeV) is determined given channel number using a polynomial: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height with energy units and x is channel number.</definition>
     <DD_Association>
-      <identifier_reference>grns.Polynomial_Term</identifier_reference>
+      <identifier_reference>nucspec.Polynomial_Term</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
@@ -248,11 +249,11 @@
   <DD_Class>
     <name>Polynomial_Term</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Polynomial_Term</local_identifier>
+    <local_identifier>nucspec.Polynomial_Term</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Describes a single term in the polynomial function.</definition>
     <DD_Association>
-      <identifier_reference>grns.coefficient</identifier_reference>
+      <identifier_reference>nucspec.coefficient</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -262,7 +263,7 @@
       </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.order</identifier_reference>
+      <identifier_reference>nucspec.order</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -275,7 +276,7 @@
   <DD_Class>
     <name>State_Table</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.State_Table</local_identifier>
+    <local_identifier>nucspec.State_Table</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
     <DD_Association>
@@ -289,7 +290,7 @@
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.State_Table_Entry</identifier_reference>
+      <identifier_reference>nucspec.State_Table_Entry</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
@@ -309,11 +310,11 @@
   <DD_Class>
     <name>State_Table_Entry</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.State_Table_Entry</local_identifier>
+    <local_identifier>nucspec.State_Table_Entry</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Links records in the state table with records in the data product</definition>
     <DD_Association>
-      <identifier_reference>grns.state_index</identifier_reference>
+      <identifier_reference>nucspec.state_index</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -323,7 +324,7 @@
       </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.Applicable_Records</identifier_reference>
+      <identifier_reference>nucspec.Applicable_Records</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
@@ -333,7 +334,7 @@
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.State_Time</identifier_reference>
+      <identifier_reference>nucspec.State_Time</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -346,11 +347,11 @@
   <DD_Class>
     <name>Applicable_Records</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Applicable_Records</local_identifier>
+    <local_identifier>nucspec.Applicable_Records</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The records to which this state applies</definition>
     <DD_Association>
-      <identifier_reference>grns.First_Last</identifier_reference>
+      <identifier_reference>nucspec.First_Last</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -360,7 +361,7 @@
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.First_Count</identifier_reference>
+      <identifier_reference>nucspec.First_Count</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -373,11 +374,11 @@
   <DD_Class>
     <name>State_Time</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.State_Time</local_identifier>
+    <local_identifier>nucspec.State_Time</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The time during which this state was applicable</definition>
     <DD_Association>
-      <identifier_reference>grns.scet_start</identifier_reference>
+      <identifier_reference>nucspec.scet_start</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -387,7 +388,7 @@
       </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.scet_stop</identifier_reference>
+      <identifier_reference>nucspec.scet_stop</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -400,13 +401,13 @@
   <DD_Class>
     <name>First_Last</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.First_Last</local_identifier>
+    <local_identifier>nucspec.First_Last</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Defines the first and last records for which this state applies.
 
 The record numbers are one-based and inclusive.</definition>
     <DD_Association>
-      <identifier_reference>grns.first_record</identifier_reference>
+      <identifier_reference>nucspec.first_record</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -416,7 +417,7 @@ The record numbers are one-based and inclusive.</definition>
       </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.last_record</identifier_reference>
+      <identifier_reference>nucspec.last_record</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -429,11 +430,11 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>First_Count</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.First_Count</local_identifier>
+    <local_identifier>nucspec.First_Count</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Defines the records to which this state applies by identifying the first record (inclusive), and the number of contiguous records, including the first.</definition>
     <DD_Association>
-      <identifier_reference>grns.first_record</identifier_reference>
+      <identifier_reference>nucspec.first_record</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences/>
       <maximum_occurrences/>
@@ -443,7 +444,7 @@ The record numbers are one-based and inclusive.</definition>
       </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.record_count</identifier_reference>
+      <identifier_reference>nucspec.record_count</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -456,11 +457,11 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>Global_Parameters</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Global_Parameters</local_identifier>
+    <local_identifier>nucspec.Global_Parameters</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Allows specification of selected instrument settings, such as accumulation time and high voltage.</definition>
     <DD_Association>
-      <identifier_reference>grns.Parameter</identifier_reference>
+      <identifier_reference>nucspec.Parameter</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
@@ -473,11 +474,11 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>Parameter</name>
     <version_id>1.0</version_id>
-    <local_identifier>grns.Parameter</local_identifier>
+    <local_identifier>nucspec.Parameter</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>A single parameter which applies to the entire observation</definition>
     <DD_Association>
-      <identifier_reference>grns.param_name</identifier_reference>
+      <identifier_reference>nucspec.param_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -487,7 +488,7 @@ The record numbers are one-based and inclusive.</definition>
       </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>grns.param_value</identifier_reference>
+      <identifier_reference>nucspec.param_value</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
