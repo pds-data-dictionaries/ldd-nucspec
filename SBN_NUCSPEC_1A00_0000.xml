@@ -149,20 +149,12 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Energy_Calibration</name>
-      </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.Instrument Settings</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Instrument Settings</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -176,10 +168,6 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Polynomial</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -193,20 +181,12 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>State_Table</name>
-      </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.Global_Parameters</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences/>
       <maximum_occurrences/>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Global_Parameters</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -220,10 +200,6 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Polynomial_Term</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -237,20 +213,12 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>coefficient</name>
-      </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.order</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>order</name>
-      </DD_Attribute_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -264,20 +232,12 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Internal_Reference</name>
-      </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.State_Table_Entry</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>State_Table_Entry</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -298,30 +258,18 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>state_index</name>
-      </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.Applicable_Records</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Applicable_Records</name>
-      </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.State_Time</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>State_Time</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -335,20 +283,12 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>First_Last</name>
-      </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.First_Count</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>First_Count</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -362,20 +302,12 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>scet_start</name>
-      </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.scet_stop</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>scet_stop</name>
-      </DD_Attribute_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -391,20 +323,12 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>first_record</name>
-      </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.last_record</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>last_record</name>
-      </DD_Attribute_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -418,20 +342,12 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences/>
       <maximum_occurrences/>
-      <DD_Class_Reference>
-        <namespace_id>grns</namespace_id>
-        <name>first_record</name>
-      </DD_Class_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.record_count</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>record_count</name>
-      </DD_Attribute_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -445,10 +361,6 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>unbounded</maximum_occurrences>
-      <DD_Class_Reference>
-        <namespace_id/>
-        <name>Parameter</name>
-      </DD_Class_Reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -462,20 +374,12 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>param_name</name>
-      </DD_Attribute_Reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.param_value</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <DD_Attribute_Reference>
-        <namespace_id/>
-        <name>param_value</name>
-      </DD_Attribute_Reference>
     </DD_Association>
   </DD_Class>
 </Ingest_LDD>
