@@ -241,13 +241,6 @@
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    <name>Internal_Reference</name>
-    <version_id>1.0</version_id>
-    <local_identifier>pds.Internal_Reference</local_identifier>
-    <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The logical identifier of the state tabke</definition>
-  </DD_Class>
-  <DD_Class>
     <name>State_Table_Entry</name>
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Table_Entry</local_identifier>
