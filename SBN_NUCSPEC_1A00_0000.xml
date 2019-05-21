@@ -124,10 +124,6 @@
       <maximum_value>18446744073709551615</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Integer</value_data_type>
-      <permissible_value_1>
-        <value/>
-        <value_meaning/>
-      </permissible_value_1>
     </value_domain_entry>
   </DD_Attribute>
   <DD_Attribute>
@@ -143,10 +139,6 @@
       <maximum_value>18446744073709551615</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Real</value_data_type>
-      <permissible_value_1>
-        <value/>
-        <value_meaning/>
-      </permissible_value_1>
     </value_domain_entry>
   </DD_Attribute>
   <DD_Attribute>
@@ -160,10 +152,6 @@
       <enumeration_flag>false</enumeration_flag>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-      <permissible_value_1>
-        <value/>
-        <value_meaning/>
-      </permissible_value_1>
     </value_domain_entry>
   </DD_Attribute>
   <DD_Attribute>
@@ -177,10 +165,6 @@
       <enumeration_flag>false</enumeration_flag>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-      <permissible_value_1>
-        <value/>
-        <value_meaning/>
-      </permissible_value_1>
     </value_domain_entry>
   </DD_Attribute>
   <DD_Class>
@@ -336,30 +320,18 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_class_reference>
-        <namespace_id/>
-        <name>State_Time_SCET</name>
-      </dd_class_reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.State_Time_SCLK</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_class_reference>
-        <namespace_id/>
-        <name>State_Time_SCLK</name>
-      </dd_class_reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.State_Time_UTC</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_class_reference>
-        <namespace_id/>
-        <name>State_Time_UTC</name>
-      </dd_class_reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -413,20 +385,12 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_attribute_reference>
-        <namespace_id>nucspec</namespace_id>
-        <name>scet_start</name>
-      </dd_attribute_reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.scet_stop</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_attribute_reference>
-        <namespace_id>nucspec</namespace_id>
-        <name>scet_stop</name>
-      </dd_attribute_reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -440,20 +404,12 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_attribute_reference>
-        <namespace_id>nucspec</namespace_id>
-        <name>sclk_start_time</name>
-      </dd_attribute_reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.sclk_stop_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_attribute_reference>
-        <namespace_id>nucspec</namespace_id>
-        <name>sclk_stop_time</name>
-      </dd_attribute_reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -467,20 +423,12 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_attribute_reference>
-        <namespace_id/>
-        <name>utc_start_time</name>
-      </dd_attribute_reference>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.utc_stop_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <dd_attribute_reference>
-        <namespace_id/>
-        <name>utc_stop_time</name>
-      </dd_attribute_reference>
     </DD_Association>
   </DD_Class>
 </Ingest_LDD>
