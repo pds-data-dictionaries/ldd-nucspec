@@ -316,21 +316,12 @@
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The time during which this state was applicable</definition>
     <DD_Association>
-      <identifier_reference>nucspec.State_Time_SCET</identifier_reference>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>State_Time_SCET</identifier_reference>
+      <identifier_reference>State_Time_SCLK</identifier_reference>
+      <identifier_reference>State_Time_UTC</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>nucspec.State_Time_SCLK</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>nucspec.State_Time_UTC</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
@@ -339,6 +330,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.First_Last</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
+
     <definition>Defines the first and last records for which this state applies.
 
 The record numbers are one-based and inclusive.</definition>
@@ -377,7 +369,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>State_Time_SCET</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.State_Time_SCET</local_identifier>
+    <local_identifier>State_Time_SCET</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft event time in seconds past J2000 for the first and last science data records for a block of records with the same state.</definition>
     <DD_Association>
@@ -396,7 +388,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>State_Time_SCLK</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.State_Time_SCLK</local_identifier>
+    <local_identifier>State_Time_SCLK</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a block of records with the same state.</definition>
     <DD_Association>
@@ -415,7 +407,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>State_Time_UTC</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.State_Time_UTC</local_identifier>
+    <local_identifier>State_Time_UTC</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Universal Coordinated Time for the first and last science data records for a block of records with the same state.</definition>
     <DD_Association>
