@@ -6,7 +6,7 @@
   <steward_id>sbn</steward_id>
   <namespace_id>nucspec</namespace_id>
   <comment>This dictionary covers nuclear spectroscopy observations.</comment>
-  <last_modification_date_time>2019-05-20T23:00:11Z</last_modification_date_time>
+  <last_modification_date_time>2019-05-21T18:24:49Z</last_modification_date_time>
   <DD_Attribute>
     <name>coefficient</name>
     <version_id>1.0</version_id>
@@ -111,6 +111,44 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+  <DD_Attribute>
+    <name>sclk_start_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.sclk_start_time</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first science data record for a block of records with the same state.</definition>
+    <value_domain_entry>
+      <enumeration_flag>false</enumeration_flag>
+      <minimum_value>0</minimum_value>
+      <maximum_value>18446744073709551615</maximum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <permissible_value_1>
+        <value/>
+        <value_meaning/>
+      </permissible_value_1>
+    </value_domain_entry>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>sclk_stop_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.sclk_stop_time</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Spacecraft clock time in ticks since spacecraft clock start for the last science data record for a block of records with the same state.</definition>
+    <value_domain_entry>
+      <enumeration_flag>false</enumeration_flag>
+      <minimum_value>0</minimum_value>
+      <maximum_value>18446744073709551615</maximum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>ASCII_Real</value_data_type>
+      <permissible_value_1>
+        <value/>
+        <value_meaning/>
+      </permissible_value_1>
+    </value_domain_entry>
+  </DD_Attribute>
   <DD_Class>
     <name>NucSpec_Observation_Properties</name>
     <version_id>1.0</version_id>
@@ -200,6 +238,7 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
+      <name>Internal_Reference</name>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.State_Table_Entry</identifier_reference>
@@ -259,16 +298,24 @@
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The time during which this state was applicable</definition>
     <DD_Association>
-      <identifier_reference>nucspec.scet_start</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <identifier_reference>nucspec.State_Time_SCET</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
+      <dd_class_reference>
+        <namespace_id/>
+        <name>State_Time_SCET</name>
+      </dd_class_reference>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>nucspec.scet_stop</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <identifier_reference>nucspec.State_Time_SCLK</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
+      <dd_class_reference>
+        <namespace_id/>
+        <name>State_Time_SCLK</name>
+      </dd_class_reference>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -309,6 +356,60 @@ The record numbers are one-based and inclusive.</definition>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>State_Time_SCET</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.State_Time_SCET</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Spacecraft event time in seconds past J2000 for the first and last science data records for a block of records with the same state.</definition>
+    <DD_Association>
+      <identifier_reference>nucspec.scet_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <dd_attribute_reference>
+        <namespace_id>nucspec</namespace_id>
+        <name>scet_start</name>
+      </dd_attribute_reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>nucspec.scet_stop</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <dd_attribute_reference>
+        <namespace_id>nucspec</namespace_id>
+        <name>scet_stop</name>
+      </dd_attribute_reference>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>State_Time_SCLK</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.State_Time_SCLK</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a block of records with the same state.</definition>
+    <DD_Association>
+      <identifier_reference>nucspec.sclk_start_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <dd_attribute_reference>
+        <namespace_id>nucspec</namespace_id>
+        <name>sclk_start_time</name>
+      </dd_attribute_reference>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>nucspec.sclk_stop_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <dd_attribute_reference>
+        <namespace_id>nucspec</namespace_id>
+        <name>sclk_stop_time</name>
+      </dd_attribute_reference>
     </DD_Association>
   </DD_Class>
 </Ingest_LDD>
