@@ -6,7 +6,7 @@
   <steward_id>sbn</steward_id>
   <namespace_id>nucspec</namespace_id>
   <comment>This dictionary covers nuclear spectroscopy observations.</comment>
-  <last_modification_date_time>2018-10-05T20:28:42Z</last_modification_date_time>
+  <last_modification_date_time>2019-05-20T23:00:11Z</last_modification_date_time>
   <DD_Attribute>
     <name>coefficient</name>
     <version_id>1.0</version_id>
@@ -111,32 +111,6 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  <DD_Attribute>
-    <name>param_name</name>
-    <version_id>1.0</version_id>
-    <local_identifier>nucspec.param_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The name of the parameter</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>UTF8_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  <DD_Attribute>
-    <name>param_value</name>
-    <version_id>1.0</version_id>
-    <local_identifier>nucspec.param_value</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The value of the parameter</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>UTF8_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
   <DD_Class>
     <name>NucSpec_Observation_Properties</name>
     <version_id>1.0</version_id>
@@ -178,12 +152,6 @@
     <definition>This class specifies instrument settings. Two options are provided: 1) Look up table for instrument states; 2) Specific "generic" settings such as high voltage and science accumulation interval. For more detailed instrument-specific information, definitions must be added to the mission dictionary.</definition>
     <DD_Association>
       <identifier_reference>nucspec.State_Table</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>nucspec.Global_Parameters</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -338,38 +306,6 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.record_count</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-  <DD_Class>
-    <name>Global_Parameters</name>
-    <version_id>1.0</version_id>
-    <local_identifier>nucspec.Global_Parameters</local_identifier>
-    <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Allows specification of selected instrument settings, such as accumulation time and high voltage.</definition>
-    <DD_Association>
-      <identifier_reference>nucspec.Parameter</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>unbounded</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-  <DD_Class>
-    <name>Parameter</name>
-    <version_id>1.0</version_id>
-    <local_identifier>nucspec.Parameter</local_identifier>
-    <submitter_name>Small Bodies Node</submitter_name>
-    <definition>A single parameter which applies to the entire observation</definition>
-    <DD_Association>
-      <identifier_reference>nucspec.param_name</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>nucspec.param_value</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
