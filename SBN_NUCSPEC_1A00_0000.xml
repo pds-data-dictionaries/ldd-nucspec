@@ -162,7 +162,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.Polynomial</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The pulse height in energy units (e.g. MeV) is determined given channel number using a polynomial: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height with energy units and x is channel number.</definition>
+    <definition>The pulse height in energy units (e.g. MeV) is determined for a given channel number using the polynomial: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height with energy units and x is channel number.</definition>
     <DD_Association>
       <identifier_reference>nucspec.Polynomial_Term</identifier_reference>
       <reference_type>component_of</reference_type>
