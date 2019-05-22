@@ -311,4 +311,15 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
+  <DD_Rule>
+      <local_identifier>state_table_ref</local_identifier>
+      <rule_context>nucspec:State_Table/pds:Internal_Reference</rule_context>
+      <DD_Rule_Statement>
+          <rule_type>Assert</rule_type>
+          <rule_test>pds:reference_type = ('nucspec_product_to_state_table')</rule_test>
+          <rule_message>In the nucspec:State_Table class, the attribute pds:reference_type must be equal to 'nucspec_product_to_state_table'.</rule_message>
+      </DD_Rule_Statement>
+  </DD_Rule>
+
 </Ingest_LDD>
