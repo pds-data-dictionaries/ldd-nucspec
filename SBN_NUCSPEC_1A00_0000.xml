@@ -143,6 +143,26 @@
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
+    <DD_Association>
+      <identifier_reference>nucspec.Calibration_Reference</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Calibration_Reference</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.Calibration_Reference</local_identifier>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Contains a reference to a document that describes the energy calibration for the product.</definition>
+    <DD_Association>
+      <identifier_reference>pds.Internal_Reference</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+      <name>Internal_Reference</name>
+    </DD_Association>
   </DD_Class>
   <DD_Class>
     <name>Instrument_Settings</name>
@@ -311,4 +331,14 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
+  <DD_Rule>
+      <local_identifier>cal_ref_doc</local_identifier>
+      <rule_context>nucspec:Calibration_Reference/pds:Internal_Reference</rule_context>
+      <DD_Rule_Statement>
+          <rule_type>Assert</rule_type>
+          <rule_test>pds:reference_type = ('energy_calibration_to_calibration_document')</rule_test>
+          <rule_message>In the nucspec:Calibration_Reference class, the attribute pds:reference_type must be equal to 'energy_calibration_to_calibration_document'.</rule_message>
+      </DD_Rule_Statement>
+  </DD_Rule>  
 </Ingest_LDD>
