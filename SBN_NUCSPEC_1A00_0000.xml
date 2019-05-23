@@ -75,6 +75,20 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
+    <name>record_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.record_count</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The last record for which this state applies, inclusive</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>1</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
     <name>scet_start</name>
     <version_id>1.0</version_id>
     <local_identifier>nucspec.scet_start</local_identifier>
