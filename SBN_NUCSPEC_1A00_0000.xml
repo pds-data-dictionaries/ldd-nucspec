@@ -314,4 +314,15 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
+  <DD_Rule>
+      <local_identifier>state_table_ref</local_identifier>
+      <rule_context>nucspec:First_Last</rule_context>
+      <DD_Rule_Statement>
+          <rule_type>Assert</rule_type>
+          <rule_test>nucspec:@last_record >= nucspec:@first_record</rule_test>
+          <rule_message>In the nucspec:First_Last class, the index of the last record must be greater than or equal to the index of the first record.</rule_message>
+      </DD_Rule_Statement>
+  </DD_Rule>
+
 </Ingest_LDD>
