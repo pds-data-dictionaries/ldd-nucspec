@@ -121,7 +121,6 @@
     <value_domain_entry>
       <enumeration_flag>false</enumeration_flag>
       <minimum_value>0</minimum_value>
-      <maximum_value>18446744073709551615</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Integer</value_data_type>
     </value_domain_entry>
@@ -136,7 +135,6 @@
     <value_domain_entry>
       <enumeration_flag>false</enumeration_flag>
       <minimum_value>0</minimum_value>
-      <maximum_value>18446744073709551615</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Real</value_data_type>
     </value_domain_entry>
