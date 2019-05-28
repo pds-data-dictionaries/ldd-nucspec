@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A00.xsd">
   <name>nucspec</name>
   <ldd_version_id>0.0.0.0</ldd_version_id>
@@ -423,4 +423,15 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
+  <DD_Rule>
+      <local_identifier>state_table_ref</local_identifier>
+      <rule_context>nucspec:State_Table/pds:Internal_Reference</rule_context>
+      <DD_Rule_Statement>
+          <rule_type>Assert</rule_type>
+          <rule_test>pds:reference_type = ('nucspec_product_to_state_table')</rule_test>
+          <rule_message>In the nucspec:State_Table class, the attribute pds:reference_type must be equal to 'nucspec_product_to_state_table'.</rule_message>
+      </DD_Rule_Statement>
+  </DD_Rule>
+
 </Ingest_LDD>
