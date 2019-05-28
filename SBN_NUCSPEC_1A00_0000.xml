@@ -295,9 +295,11 @@
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The records to which this state applies</definition>
     <DD_Association>
-      <identifier_reference>nucspec.First_Last</identifier_reference>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>First_Last</identifier_reference>
+      <identifier_reference>First_Count</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -326,7 +328,7 @@
   <DD_Class>
     <name>First_Last</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.First_Last</local_identifier>
+    <local_identifier>First_Last</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
 
     <definition>Defines the first and last records for which this state applies.
@@ -348,7 +350,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Class>
     <name>First_Count</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.First_Count</local_identifier>
+    <local_identifier>First_Count</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Defines the records to which this state applies by identifying the first record (inclusive), and the number of contiguous records, including the first.</definition>
     <DD_Association>
