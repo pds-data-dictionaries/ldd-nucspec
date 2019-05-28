@@ -64,7 +64,7 @@
           <nucspec:State_Table>
             <Internal_Reference>
               <lid_reference>urn:nasa:pds:dawn_grand:data:state_table</lid_reference>
-              <reference_type>nucspec_product_to_state_table</reference_type>
+              <reference_type>ncspec_product_to_state_table</reference_type>
             </Internal_Reference>
             <nucspec:State_Table_Entry>
               <nucspec:state_index>1</nucspec:state_index>
@@ -73,10 +73,10 @@
                     <local_identifier_reference>table</local_identifier_reference>
                     <local_reference_type>state_table_to_data_table</local_reference_type>
                 </Local_Internal_Reference>
-                <nucspec:First_Last>
+                <nucspec:First_Count>
                   <nucspec:first_record>1</nucspec:first_record>
-                  <nucspec:last_record>1</nucspec:last_record>
-                </nucspec:First_Last>
+                  <nucspec:record_count>1</nucspec:record_count>
+                </nucspec:First_Count>
               </nucspec:Applicable_Records>
             </nucspec:State_Table_Entry>
             <nucspec:State_Table_Entry>
@@ -86,10 +86,10 @@
                     <local_identifier_reference>table</local_identifier_reference>
                     <local_reference_type>state_table_to_data_table</local_reference_type>
                 </Local_Internal_Reference>
-                <nucspec:First_Last>
+                <nucspec:First_Count>
                   <nucspec:first_record>2</nucspec:first_record>
-                  <nucspec:last_record>3</nucspec:last_record>
-                </nucspec:First_Last>
+                  <nucspec:record_count>8000</nucspec:record_count>
+                </nucspec:First_Count>
               </nucspec:Applicable_Records>
             </nucspec:State_Table_Entry>
           </nucspec:State_Table>
