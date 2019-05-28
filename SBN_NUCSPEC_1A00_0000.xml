@@ -251,13 +251,13 @@
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Describes a single term in the polynomial function.</definition>
     <DD_Association>
-      <identifier_reference>nucspec.coefficient</identifier_reference>
+      <identifier_reference>nucspec.order</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>nucspec.order</identifier_reference>
+      <identifier_reference>nucspec.coefficient</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
