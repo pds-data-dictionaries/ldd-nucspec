@@ -243,7 +243,7 @@
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The records in the referenced product to which this state applies</definition>
     <DD_Association>
-      <identifier_reference>pds.Local_Identifier_Reference</identifier_reference>
+      <identifier_reference>pds.Local_Internal_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -336,7 +336,7 @@ The record numbers are one-based and inclusive.</definition>
       <rule_context>nucspec:Applicable_Records/pds:Local_Internal_Reference</rule_context>
       <DD_Rule_Statement>
           <rule_type>Assert</rule_type>
-          <rule_test>pds:local_reference_type = ('state_table_to_data_table')</rule_test>
+          <rule_test>pds:local_reference_type = ('applicable_records_to_data_table')</rule_test>
           <rule_message>In the nucspec:Applicable_Records class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</rule_message>
       </DD_Rule_Statement>
   </DD_Rule>
