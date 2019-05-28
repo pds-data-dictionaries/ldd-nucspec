@@ -52,7 +52,7 @@
     <local_identifier>nucspec.first_record</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The first record for which the state applies, inclusive</definition>
+    <definition>The first record for which the state applies, inclusive.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -65,7 +65,7 @@
     <local_identifier>nucspec.last_record</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The last record for which this state applies, inclusive</definition>
+    <definition>The last record for which this state applies, inclusive.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -236,7 +236,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.Polynomial</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The pulse height in energy units (e.g. MeV) is determined given channel number using a polynomial: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height with energy units and x is channel number.</definition>
+    <definition>The pulse height in energy units (e.g. MeV) is determined for a given channel number using the polynomial: H(x) = a0 + a1 x + a2 x^2 + ..., where H is pulse height with energy units and x is channel number.</definition>
     <DD_Association>
       <identifier_reference>nucspec.Polynomial_Term</identifier_reference>
       <reference_type>component_of</reference_type>
@@ -288,7 +288,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Table_Entry</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Links records in the state table with records in the data product</definition>
+    <definition>Links records in the state table with records in the data product.</definition>
     <DD_Association>
       <identifier_reference>nucspec.state_index</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -313,7 +313,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.Applicable_Records</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The records to which this state applies</definition>
+    <definition>The records to which this state applies.</definition>
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>First_Last</identifier_reference>
@@ -334,7 +334,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Time</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The time during which this state was applicable</definition>
+    <definition>The time during which this state was applicable.</definition>
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>State_Time_SCET</identifier_reference>
