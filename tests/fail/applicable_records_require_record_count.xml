@@ -47,16 +47,16 @@
         <nucspec:Energy_Calibration>
           <nucspec:Polynomial>
             <nucspec:Polynomial_Term>
-              <nucspec:coefficient>23</nucspec:coefficient>
               <nucspec:order>0</nucspec:order>
+              <nucspec:coefficient>23</nucspec:coefficient>
             </nucspec:Polynomial_Term>
             <nucspec:Polynomial_Term>
-              <nucspec:coefficient>1</nucspec:coefficient>
               <nucspec:order>1</nucspec:order>
+              <nucspec:coefficient>1</nucspec:coefficient>
             </nucspec:Polynomial_Term>
             <nucspec:Polynomial_Term>
-              <nucspec:coefficient>0.25</nucspec:coefficient>
               <nucspec:order>2</nucspec:order>
+              <nucspec:coefficient>0.25</nucspec:coefficient>
             </nucspec:Polynomial_Term>
           </nucspec:Polynomial>
         </nucspec:Energy_Calibration>
@@ -64,14 +64,14 @@
           <nucspec:State_Table>
             <Internal_Reference>
               <lid_reference>urn:nasa:pds:dawn_grand:data:state_table</lid_reference>
-              <reference_type>data_product_to_state_table</reference_type>
+              <reference_type>nucspec_product_to_state_table</reference_type>
             </Internal_Reference>
             <nucspec:State_Table_Entry>
               <nucspec:state_index>1</nucspec:state_index>
               <nucspec:Applicable_Records>
                 <Local_Internal_Reference>
                     <local_identifier_reference>tabl</local_identifier_reference>
-                    <local_reference_type>applicable_records_to_data_table</local_reference_type>
+                    <local_reference_type>state_table_to_data_table</local_reference_type>
                 </Local_Internal_Reference>
                 <nucspec:First_Count>
                   <nucspec:first_record>1</nucspec:first_record>
@@ -84,7 +84,7 @@
               <nucspec:Applicable_Records>
                 <Local_Internal_Reference>
                     <local_identifier_reference>table</local_identifier_reference>
-                    <local_reference_type>applicable_records_to_data_table</local_reference_type>
+                    <local_reference_type>state_table_to_data_table</local_reference_type>
                 </Local_Internal_Reference>
                 <nucspec:First_Count>
                   <nucspec:first_record>2</nucspec:first_record>
