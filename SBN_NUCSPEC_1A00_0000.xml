@@ -265,7 +265,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.Instrument_Settings</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>This class specifies instrument settings. Two options are provided: 1) Look up table for instrument states; 2) Specific "generic" settings such as high voltage and science accumulation interval. For more detailed instrument-specific information, definitions must be added to the mission dictionary.</definition>
+    <definition>This class specifies instrument settings. Instrument settings may be diven via a state table, which may be associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply.</definition>
     <DD_Association>
       <identifier_reference>nucspec.State_Table</identifier_reference>
       <reference_type>component_of</reference_type>
@@ -310,7 +310,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Table</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
+    <definition>Specifies an additional look-up table that provides additional information about specific observations within the product.</definition>
     <DD_Association>
       <identifier_reference>pds.Internal_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
@@ -335,7 +335,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Table_Entry</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Links records in the state table with records in the data product.</definition>
+    <definition>Associates individual observations in the data product with a record in the state table, providing additonal information on those observations.</definition>
     <DD_Association>
       <identifier_reference>nucspec.state_index</identifier_reference>
       <reference_type>attribute_of</reference_type>
