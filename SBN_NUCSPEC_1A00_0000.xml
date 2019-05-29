@@ -310,7 +310,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Table</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
+    <definition>Specifies an additional look-up table that provides additional information about specific observations within the product.</definition>
     <DD_Association>
       <identifier_reference>pds.Internal_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
