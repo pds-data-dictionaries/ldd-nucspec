@@ -335,7 +335,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.State_Table_Entry</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Links records in the state table with records in the data product.</definition>
+    <definition>Associates individual observations in the data product with a record in the state table, providing additonal information on those observations.</definition>
     <DD_Association>
       <identifier_reference>nucspec.state_index</identifier_reference>
       <reference_type>attribute_of</reference_type>
