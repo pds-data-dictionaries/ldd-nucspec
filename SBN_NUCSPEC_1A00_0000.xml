@@ -343,22 +343,18 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>nucspec.Applicable_Records</identifier_reference>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>Applicable_Records</identifier_reference>
+      <identifier_reference>State_Time</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>unbounded</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>nucspec.State_Time</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>unbounded</maximum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
   <DD_Class>
     <name>Applicable_Records</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.Applicable_Records</local_identifier>
+    <local_identifier>Applicable_Records</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The records to which this state applies.</definition>
     <DD_Association>
@@ -379,7 +375,7 @@
   <DD_Class>
     <name>State_Time</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.State_Time</local_identifier>
+    <local_identifier>State_Time</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The time during which this state was applicable.</definition>
     <DD_Association>
