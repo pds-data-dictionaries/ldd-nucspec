@@ -122,12 +122,12 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft clock time in ticks since spacecraft clock start for the first science data record for a block of records with the same state.</definition>
-    <value_domain_entry>
+    <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
       <minimum_value>0</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-      <value_data_type>ASCII_Integer</value_data_type>
-    </value_domain_entry>
+    </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>sclk_stop_time</name>
@@ -136,12 +136,12 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft clock time in ticks since spacecraft clock start for the last science data record for a block of records with the same state.</definition>
-    <value_domain_entry>
+    <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-      <value_data_type>ASCII_Real</value_data_type>
-    </value_domain_entry>
+    </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>utc_start_time</name>
@@ -150,11 +150,11 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Universal Coordinated Time for the first science data record for a block of records with the same state.</definition>
-    <value_domain_entry>
+    <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-    </value_domain_entry>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>utc_stop_time</name>
@@ -163,11 +163,11 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Universal Coordinated Time for the last science data record for a block of records with the same state.</definition>
-    <value_domain_entry>
+    <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-    </value_domain_entry>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>name</name>
@@ -258,7 +258,6 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <name>Internal_Reference</name>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -317,7 +316,6 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-      <name>Internal_Reference</name>
     </DD_Association>
     <DD_Association>
       <identifier_reference>nucspec.State_Table_Entry</identifier_reference>
