@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A00.xsd">
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A00.xsd">
   <name>nucspec</name>
   <ldd_version_id>0.0.0.0</ldd_version_id>
   <full_name>Small Bodies Node</full_name>
@@ -448,81 +449,79 @@ The record numbers are one-based and inclusive.</definition>
   </DD_Class>
 
   <DD_Rule>
-      <local_identifier>state_table_ref</local_identifier>
-      <rule_context>nucspec:State_Table/pds:Internal_Reference</rule_context>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>pds:reference_type = ('nucspec_product_to_state_table')</rule_test>
-          <rule_message>In the nucspec:State_Table class, the attribute pds:reference_type must be equal to 'nucspec_product_to_state_table'.</rule_message>
-      </DD_Rule_Statement>
-  </DD_Rule>
-
-
-  <DD_Rule>
-      <local_identifier>cal_ref_doc</local_identifier>
-      <rule_context>nucspec:Calibration_Reference/pds:Internal_Reference</rule_context>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>pds:reference_type = ('energy_calibration_to_calibration_document')</rule_test>
-          <rule_message>In the nucspec:Calibration_Reference class, the attribute pds:reference_type must be equal to 'energy_calibration_to_calibration_document'.</rule_message>
-      </DD_Rule_Statement>
-  </DD_Rule>  
-
-  <DD_Rule>
-      <local_identifier>first_last_ordering</local_identifier>
-      <rule_context>nucspec:First_Last</rule_context>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>nucspec:last_record >= nucspec:first_record</rule_test>
-          <rule_message>In the nucspec:First_Last class, the index of the last record must be greater than or equal to the index of the first record.</rule_message>
-      </DD_Rule_Statement>
+    <local_identifier>state_table_ref</local_identifier>
+    <rule_context>nucspec:State_Table/pds:Internal_Reference</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>pds:reference_type = ('nucspec_product_to_state_table')</rule_test>
+      <rule_message>In the nucspec:State_Table class, the attribute pds:reference_type must be equal to 'nucspec_product_to_state_table'.</rule_message>
+    </DD_Rule_Statement>
   </DD_Rule>
 
   <DD_Rule>
-      <local_identifier>applicable_records_local_reference_type</local_identifier>
-      <rule_context>nucspec:Applicable_Records/pds:Local_Internal_Reference</rule_context>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>pds:local_reference_type = ('state_table_to_data_table')</rule_test>
-          <rule_message>In the nucspec:Applicable_Records class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</rule_message>
-      </DD_Rule_Statement>
+    <local_identifier>cal_ref_doc</local_identifier>
+    <rule_context>nucspec:Calibration_Reference/pds:Internal_Reference</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>pds:reference_type = ('energy_calibration_to_calibration_document')</rule_test>
+      <rule_message>In the nucspec:Calibration_Reference class, the attribute pds:reference_type must be equal to 'energy_calibration_to_calibration_document'.</rule_message>
+    </DD_Rule_Statement>
   </DD_Rule>
 
   <DD_Rule>
-      <local_identifier>applicable_records_require_record_count</local_identifier>
-      <rule_context>nucspec:Applicable_Records</rule_context>
-      <rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>//*[pds:local_identifier=$local_id]/pds:records</rule_test>
-          <rule_message>In the nucspec:Applicable_Records class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference a table with a record count.</rule_message>
-      </DD_Rule_Statement>
-  </DD_Rule>
-  
-  <DD_Rule>
-      <local_identifier>last_bounds_check</local_identifier>
-      <rule_context>nucspec:First_Last</rule_context>
-      <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
-      <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
-      <rule_assign>name="last_record" value="number(nucspec:last_record)"</rule_assign>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>$record_count >= $last_record</rule_test>
-          <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
-      </DD_Rule_Statement>
+    <local_identifier>first_last_ordering</local_identifier>
+    <rule_context>nucspec:First_Last</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>nucspec:last_record >= nucspec:first_record</rule_test>
+      <rule_message>In the nucspec:First_Last class, the index of the last record must be greater than or equal to the index of the first record.</rule_message>
+    </DD_Rule_Statement>
   </DD_Rule>
 
   <DD_Rule>
-      <local_identifier>first_count_bounds_check</local_identifier>
-      <rule_context>nucspec:First_Count</rule_context>
-      <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
-      <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
-      <rule_assign>name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"</rule_assign>
-      <DD_Rule_Statement>
-          <rule_type>Assert</rule_type>
-          <rule_test>$record_count >= $last_record</rule_test>
-          <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
-      </DD_Rule_Statement>
+    <local_identifier>applicable_records_local_reference_type</local_identifier>
+    <rule_context>nucspec:Applicable_Records/pds:Local_Internal_Reference</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>pds:local_reference_type = ('state_table_to_data_table')</rule_test>
+      <rule_message>In the nucspec:Applicable_Records class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</rule_message>
+    </DD_Rule_Statement>
   </DD_Rule>
 
+  <DD_Rule>
+    <local_identifier>applicable_records_require_record_count</local_identifier>
+    <rule_context>nucspec:Applicable_Records</rule_context>
+    <rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>//*[pds:local_identifier=$local_id]/pds:records</rule_test>
+      <rule_message>In the nucspec:Applicable_Records class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference a table with a record count.</rule_message>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
+  <DD_Rule>
+    <local_identifier>last_bounds_check</local_identifier>
+    <rule_context>nucspec:First_Last</rule_context>
+    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
+    <rule_assign>name="last_record" value="number(nucspec:last_record)"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>$record_count >= $last_record</rule_test>
+      <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
+  <DD_Rule>
+    <local_identifier>first_count_bounds_check</local_identifier>
+    <rule_context>nucspec:First_Count</rule_context>
+    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
+    <rule_assign>name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>$record_count >= $last_record</rule_test>
+      <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
+    </DD_Rule_Statement>
+  </DD_Rule>
 </Ingest_LDD>
