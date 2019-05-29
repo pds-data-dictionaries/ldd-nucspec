@@ -70,8 +70,8 @@
               <nucspec:state_index>1</nucspec:state_index>
               <nucspec:State_Time>
                 <nucspec:State_Time_UTC>
-                  <nucspec:utc_start_time>2015-03-16T23:59:03</nucspec:utc_start_time>
-                  <nucspec:utc_stop_time>2015-03-17T23:59:03</nucspec:utc_stop_time>
+                  <nucspec:utc_start_time>2015-03-16T23:59:03Z</nucspec:utc_start_time>
+                  <nucspec:utc_stop_time>2015-03-17T23:59:03Z</nucspec:utc_stop_time>
                 </nucspec:State_Time_UTC>
               </nucspec:State_Time>
             </nucspec:State_Table_Entry>
