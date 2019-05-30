@@ -138,7 +138,7 @@
     <definition>Spacecraft clock time in ticks since spacecraft clock start for the last science data record for a block of records with the same state.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Real</value_data_type>
+      <value_data_type>ASCII_Integer</value_data_type>
       <minimum_value>0</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
