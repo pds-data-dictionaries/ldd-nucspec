@@ -175,7 +175,7 @@
     <local_identifier>nucspec.name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The name of the detector</definition>
+    <definition>The name of the detector.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>UTF8_Short_String_Collapsed</value_data_type>
@@ -271,7 +271,7 @@
     <version_id>1.0</version_id>
     <local_identifier>nucspec.Instrument_Settings</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>This class specifies instrument settings. Instrument settings may be diven via a state table, which may be associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply.</definition>
+    <definition>This class specifies instrument settings. Instrument settings may be driven via a state table, which may be associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply.</definition>
     <DD_Association>
       <identifier_reference>nucspec.State_Table</identifier_reference>
       <reference_type>component_of</reference_type>
