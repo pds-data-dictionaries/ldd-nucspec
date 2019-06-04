@@ -573,6 +573,7 @@ The record numbers are one-based and inclusive.</definition>
       <rule_type>Assert</rule_type>
       <rule_test>//*[pds:local_identifier=$local_id]/pds:records</rule_test>
       <rule_message>In the nucspec:Applicable_Records class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference a table with a record count.</rule_message>
+      <rule_description>In the nucspec:Applicable_Records class, the local_identifier_reference must reference a table with a record count.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
 
@@ -586,6 +587,7 @@ The record numbers are one-based and inclusive.</definition>
       <rule_type>Assert</rule_type>
       <rule_test>$record_count >= $last_record</rule_test>
       <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
+      <rule_description>In the nucspec:First_Last class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
 
@@ -599,6 +601,7 @@ The record numbers are one-based and inclusive.</definition>
       <rule_type>Assert</rule_type>
       <rule_test>$record_count >= $last_record</rule_test>
       <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
+      <rule_description>In the nucspec:First_Last class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
 </Ingest_LDD>
