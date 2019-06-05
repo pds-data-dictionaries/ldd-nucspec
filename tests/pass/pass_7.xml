@@ -68,6 +68,10 @@
             </Internal_Reference>
             <nucspec:State_Table_Entry>
               <nucspec:state_index>1</nucspec:state_index>
+              <Local_Internal_Reference>
+                  <local_identifier_reference>table</local_identifier_reference>
+                  <local_reference_type>state_table_to_data_table</local_reference_type>
+              </Local_Internal_Reference>
               <nucspec:State_Time>
                 <nucspec:state_time_field_name>SCLK</nucspec:state_time_field_name>
                 <nucspec:State_Time_SCLK>

@@ -9,7 +9,7 @@
                       http://pds.nasa.gov/pds4/nucspec/v0 https://pds.nasa.gov/pds4/pds/v1/PDS4_nucspec_1000.xsd
                      ">
   <Identification_Area>
-    <logical_identifier>urn:nasa:pds:dawn_grand:data:pass8</logical_identifier>
+    <logical_identifier>urn:nasa:pds:dawn_grand:data:state_table_ref</logical_identifier>
     <version_id>0.0</version_id>
     <title>GRaND BGO 2015-03-16T23:59:03</title>
     <information_model_version>1.10.0.0</information_model_version>
@@ -72,13 +72,25 @@
                   <local_identifier_reference>table</local_identifier_reference>
                   <local_reference_type>state_table_to_data_table</local_reference_type>
               </Local_Internal_Reference>
-              <nucspec:State_Time>
-                <nucspec:state_time_field_name>SCET_UTC</nucspec:state_time_field_name>
-                <nucspec:State_Time_UTC>
-                  <nucspec:utc_start_time>2015-03-16T23:59:03Z</nucspec:utc_start_time>
-                  <nucspec:utc_stop_time>2015-03-17T23:59:03Z</nucspec:utc_stop_time>
-                </nucspec:State_Time_UTC>
-              </nucspec:State_Time>
+              <nucspec:Applicable_Records>
+                <nucspec:First_Last>
+                  <nucspec:first_record>1</nucspec:first_record>
+                  <nucspec:last_record>1</nucspec:last_record>
+                </nucspec:First_Last>
+              </nucspec:Applicable_Records>
+            </nucspec:State_Table_Entry>
+            <nucspec:State_Table_Entry>
+              <nucspec:state_index>2</nucspec:state_index>
+              <Local_Internal_Reference>
+                  <local_identifier_reference>tabl</local_identifier_reference>
+                  <local_reference_type>state_table_to_data_table</local_reference_type>
+              </Local_Internal_Reference>
+              <nucspec:Applicable_Records>
+                <nucspec:First_Last>
+                  <nucspec:first_record>2</nucspec:first_record>
+                  <nucspec:last_record>3</nucspec:last_record>
+                </nucspec:First_Last>
+              </nucspec:Applicable_Records>
             </nucspec:State_Table_Entry>
           </nucspec:State_Table>
         </nucspec:Instrument_Settings>
