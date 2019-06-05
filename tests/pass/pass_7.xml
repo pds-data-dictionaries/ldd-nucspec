@@ -69,6 +69,7 @@
             <nucspec:State_Table_Entry>
               <nucspec:state_index>1</nucspec:state_index>
               <nucspec:State_Time>
+                <nucspec:state_time_field_name>SCLK</nucspec:state_time_field_name>
                 <nucspec:State_Time_SCLK>
                   <nucspec:sclk_start_time>479865543</nucspec:sclk_start_time>
                   <nucspec:sclk_stop_time>479866000</nucspec:sclk_stop_time>

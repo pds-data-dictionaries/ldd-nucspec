@@ -90,12 +90,25 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>scet_start</name>
+    <name>state_time_field_name</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.scet_start</local_identifier>
+    <local_identifier>nucspec.state_time_field_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft event time in seconds past J2000 for the first science data record for a block of records with the same state.</definition>
+    <definition>The name of the field in the referenced data table that contains the time.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>UTF8_String</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>et_start</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.et_start</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>Ephemeris time, as defined by the referenced field, for the first science data record for a block of records with the same state.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -103,12 +116,12 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>scet_stop</name>
+    <name>et_stop</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.scet_stop</local_identifier>
+    <local_identifier>nucspec.et_stop</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft event time in seconds past J2000 for the last science data record for a block of records with the same state.</definition>
+    <definition>Ephemeris time, as defined by the referenced field, for the last science data record for a block of records with the same state.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -377,10 +390,17 @@
     <version_id>1.0</version_id>
     <local_identifier>State_Time</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The time during which this state was applicable.</definition>
+    <definition>The time during which this state was applicable. The state table entry is applicable to records in the referenced data table if the time of the data record, as given by state_time_field_name, is between the start time and stop time given in State_Time.</definition>
+    <DD_Association>
+      <identifier_reference>nucspec.state_time_field_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>State_Time_SCET</identifier_reference>
+      <identifier_reference>State_Time_ET</identifier_reference>
       <identifier_reference>State_Time_SCLK</identifier_reference>
       <identifier_reference>State_Time_UTC</identifier_reference>
       <reference_type>component_of</reference_type>
@@ -468,19 +488,19 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    <name>State_Time_SCET</name>
+    <name>State_Time_ET</name>
     <version_id>1.0</version_id>
-    <local_identifier>State_Time_SCET</local_identifier>
+    <local_identifier>State_Time_ET</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft event time in seconds past J2000 for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Ephemeris time, as defined by the referenced field, for the first and last science data records for a block of records with the same state.</definition>
     <DD_Association>
-      <identifier_reference>nucspec.scet_start</identifier_reference>
+      <identifier_reference>nucspec.et_start</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>nucspec.scet_stop</identifier_reference>
+      <identifier_reference>nucspec.et_stop</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -604,4 +624,5 @@ The record numbers are one-based and inclusive.</definition>
       <rule_description>In the nucspec:First_Last class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
+
 </Ingest_LDD>

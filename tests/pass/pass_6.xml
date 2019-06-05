@@ -69,10 +69,11 @@
             <nucspec:State_Table_Entry>
               <nucspec:state_index>1</nucspec:state_index>
               <nucspec:State_Time>
-                <nucspec:State_Time_SCET>
-                  <nucspec:scet_start>479865543</nucspec:scet_start>
-                  <nucspec:scet_stop>479866000</nucspec:scet_stop>
-                </nucspec:State_Time_SCET>
+                <nucspec:state_time_field_name>ET_MID</nucspec:state_time_field_name>
+                <nucspec:State_Time_ET>
+                  <nucspec:et_start>479865543</nucspec:et_start>
+                  <nucspec:et_stop>479866000</nucspec:et_stop>
+                </nucspec:State_Time_ET>
               </nucspec:State_Time>
             </nucspec:State_Table_Entry>
           </nucspec:State_Table>
