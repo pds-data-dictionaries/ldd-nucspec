@@ -638,4 +638,18 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Rule_Statement>
   </DD_Rule>
 
+
+  <DD_Rule>
+    <local_identifier>state_time_field_exists</local_identifier>
+    <rule_context>nucspec:State_Time</rule_context>
+    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="field_name" value="nucspec:state_time_field_name"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>//(pds:Table_Character | pds:Table_Delimited | pds:Table_Binary)[pds:local_identifier = $local_id]//(pds:Field_Character | pds:Field_Delimited | pds:Field_Binary)[pds:name=$field_name]</rule_test>
+      <rule_message>In the nucspec:State_Time class, state_time_field_name (&lt;sch:value-of select='$field_name'/&gt;) must reference a field in the referenced data table (&lt;sch:value-of select='$local_id'/&gt;).</rule_message>
+      <rule_description>In the nucspec:State_Time class, state_time_field_name must reference a field in the referenced data table.</rule_description>
+    </DD_Rule_Statement>
+  </DD_Rule>  
+
 </Ingest_LDD>
