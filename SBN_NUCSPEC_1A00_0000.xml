@@ -108,7 +108,7 @@
     <local_identifier>nucspec.et_start</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Ephemeris time, as defined by the referenced field, for the first science data record for a block of records with the same state.</definition>
+    <definition>The earliest ephemeris time, as defined by the referenced field, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -121,7 +121,7 @@
     <local_identifier>nucspec.et_stop</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Ephemeris time, as defined by the referenced field, for the last science data record for a block of records with the same state.</definition>
+    <definition>The latest ephemeris time, as defined by the referenced field, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -134,7 +134,7 @@
     <local_identifier>nucspec.sclk_start_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first science data record for a block of records with the same state.</definition>
+    <definition>The earliest spacecraft clock time, in ticks since spacecraft clock start, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -148,7 +148,7 @@
     <local_identifier>nucspec.sclk_stop_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft clock time in ticks since spacecraft clock start for the last science data record for a block of records with the same state.</definition>
+    <definition>The latest spacecraft clock time, in ticks since spacecraft clock start, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -162,7 +162,7 @@
     <local_identifier>nucspec.utc_start_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Universal Coordinated Time for the first science data record for a block of records with the same state.</definition>
+    <definition>The earliest Universal Coordinated Time for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -175,7 +175,7 @@
     <local_identifier>nucspec.utc_stop_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Universal Coordinated Time for the last science data record for a block of records with the same state.</definition>
+    <definition>The earliest Universal Coordinated Time for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -492,7 +492,7 @@ The record numbers are one-based and inclusive.</definition>
     <version_id>1.0</version_id>
     <local_identifier>State_Time_ET</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Ephemeris time, as defined by the referenced field, for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Ephemeris time, as defined by the referenced field, for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
       <identifier_reference>nucspec.et_start</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -511,7 +511,7 @@ The record numbers are one-based and inclusive.</definition>
     <version_id>1.0</version_id>
     <local_identifier>State_Time_SCLK</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
       <identifier_reference>nucspec.sclk_start_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -530,7 +530,7 @@ The record numbers are one-based and inclusive.</definition>
     <version_id>1.0</version_id>
     <local_identifier>State_Time_UTC</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Universal Coordinated Time for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Universal Coordinated Time for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
       <identifier_reference>nucspec.utc_start_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
