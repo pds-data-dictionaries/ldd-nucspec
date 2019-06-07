@@ -90,12 +90,25 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>scet_start</name>
+    <name>state_time_field_name</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.scet_start</local_identifier>
+    <local_identifier>nucspec.state_time_field_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft event time in seconds past J2000 for the first science data record for a block of records with the same state.</definition>
+    <definition>The name of the field in the referenced data table that contains the time.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>UTF8_String</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>et_start</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.et_start</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Small Bodies Node</submitter_name>
+    <definition>The earliest ephemeris time, as defined by the referenced field, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -103,12 +116,12 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>scet_stop</name>
+    <name>et_stop</name>
     <version_id>1.0</version_id>
-    <local_identifier>nucspec.scet_stop</local_identifier>
+    <local_identifier>nucspec.et_stop</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft event time in seconds past J2000 for the last science data record for a block of records with the same state.</definition>
+    <definition>The latest ephemeris time, as defined by the referenced field, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -121,7 +134,7 @@
     <local_identifier>nucspec.sclk_start_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first science data record for a block of records with the same state.</definition>
+    <definition>The earliest spacecraft clock time, in ticks since spacecraft clock start, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -135,7 +148,7 @@
     <local_identifier>nucspec.sclk_stop_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft clock time in ticks since spacecraft clock start for the last science data record for a block of records with the same state.</definition>
+    <definition>The latest spacecraft clock time, in ticks since spacecraft clock start, for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -149,7 +162,7 @@
     <local_identifier>nucspec.utc_start_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Universal Coordinated Time for the first science data record for a block of records with the same state.</definition>
+    <definition>The earliest Universal Coordinated Time for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -162,7 +175,7 @@
     <local_identifier>nucspec.utc_stop_time</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Universal Coordinated Time for the last science data record for a block of records with the same state.</definition>
+    <definition>The earliest Universal Coordinated Time for which this state is applicable.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -343,6 +356,12 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
+      <identifier_reference>pds.Local_Internal_Reference</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>Applicable_Records</identifier_reference>
       <identifier_reference>State_Time</identifier_reference>
@@ -358,12 +377,6 @@
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The records to which this state applies.</definition>
     <DD_Association>
-      <identifier_reference>pds.Local_Internal_Reference</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>First_Last</identifier_reference>
       <identifier_reference>First_Count</identifier_reference>
@@ -377,10 +390,17 @@
     <version_id>1.0</version_id>
     <local_identifier>State_Time</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>The time during which this state was applicable.</definition>
+    <definition>The time during which this state was applicable. The state table entry is applicable to records in the referenced data table if the time of the data record, as given by state_time_field_name, is between the start time and stop time given in State_Time.</definition>
+    <DD_Association>
+      <identifier_reference>nucspec.state_time_field_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>State_Time_SCET</identifier_reference>
+      <identifier_reference>State_Time_ET</identifier_reference>
       <identifier_reference>State_Time_SCLK</identifier_reference>
       <identifier_reference>State_Time_UTC</identifier_reference>
       <reference_type>component_of</reference_type>
@@ -468,19 +488,19 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    <name>State_Time_SCET</name>
+    <name>State_Time_ET</name>
     <version_id>1.0</version_id>
-    <local_identifier>State_Time_SCET</local_identifier>
+    <local_identifier>State_Time_ET</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft event time in seconds past J2000 for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Ephemeris time, as defined by the referenced field, for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
-      <identifier_reference>nucspec.scet_start</identifier_reference>
+      <identifier_reference>nucspec.et_start</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>nucspec.scet_stop</identifier_reference>
+      <identifier_reference>nucspec.et_stop</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -491,7 +511,7 @@ The record numbers are one-based and inclusive.</definition>
     <version_id>1.0</version_id>
     <local_identifier>State_Time_SCLK</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
       <identifier_reference>nucspec.sclk_start_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -510,7 +530,7 @@ The record numbers are one-based and inclusive.</definition>
     <version_id>1.0</version_id>
     <local_identifier>State_Time_UTC</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Universal Coordinated Time for the first and last science data records for a block of records with the same state.</definition>
+    <definition>Universal Coordinated Time for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
       <identifier_reference>nucspec.utc_start_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -557,7 +577,7 @@ The record numbers are one-based and inclusive.</definition>
 
   <DD_Rule>
     <local_identifier>applicable_records_local_reference_type</local_identifier>
-    <rule_context>nucspec:Applicable_Records/pds:Local_Internal_Reference</rule_context>
+    <rule_context>nucspec:State_Table_Entry/pds:Local_Internal_Reference</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>pds:local_reference_type = ('state_table_to_data_table')</rule_test>
@@ -568,7 +588,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>applicable_records_require_record_count</local_identifier>
     <rule_context>nucspec:Applicable_Records</rule_context>
-    <rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>//*[pds:local_identifier=$local_id]/pds:records</rule_test>
@@ -578,9 +598,22 @@ The record numbers are one-based and inclusive.</definition>
   </DD_Rule>
 
   <DD_Rule>
+    <local_identifier>state_table_entry_table_exists</local_identifier>
+    <rule_context>nucspec:State_Table_Entry</rule_context>
+    <rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>//(pds:Table_Character | pds:Table_Delimited | pds:Table_Binary)[pds:local_identifier = $local_id]</rule_test>
+      <rule_message>In the nucspec:State_Table_Entry class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference a table.</rule_message>
+      <rule_description>In the nucspec:State_Table_Entry class, the local_identifier_reference must reference a table.</rule_description>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
+
+  <DD_Rule>
     <local_identifier>last_bounds_check</local_identifier>
     <rule_context>nucspec:First_Last</rule_context>
-    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
     <rule_assign>name="last_record" value="number(nucspec:last_record)"</rule_assign>
     <DD_Rule_Statement>
@@ -594,7 +627,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>first_count_bounds_check</local_identifier>
     <rule_context>nucspec:First_Count</rule_context>
-    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
     <rule_assign>name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"</rule_assign>
     <DD_Rule_Statement>
@@ -604,4 +637,19 @@ The record numbers are one-based and inclusive.</definition>
       <rule_description>In the nucspec:First_Last class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
+
+
+  <DD_Rule>
+    <local_identifier>state_time_field_exists</local_identifier>
+    <rule_context>nucspec:State_Time</rule_context>
+    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="field_name" value="nucspec:state_time_field_name"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>//(pds:Table_Character | pds:Table_Delimited | pds:Table_Binary)[pds:local_identifier = $local_id]//(pds:Field_Character | pds:Field_Delimited | pds:Field_Binary)[pds:name=$field_name]</rule_test>
+      <rule_message>In the nucspec:State_Time class, state_time_field_name (&lt;sch:value-of select='$field_name'/&gt;) must reference a field in the referenced data table (&lt;sch:value-of select='$local_id'/&gt;).</rule_message>
+      <rule_description>In the nucspec:State_Time class, state_time_field_name must reference a field in the referenced data table.</rule_description>
+    </DD_Rule_Statement>
+  </DD_Rule>  
+
 </Ingest_LDD>

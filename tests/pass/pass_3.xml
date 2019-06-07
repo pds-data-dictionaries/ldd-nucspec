@@ -68,11 +68,11 @@
             </Internal_Reference>
             <nucspec:State_Table_Entry>
               <nucspec:state_index>1</nucspec:state_index>
+              <Local_Internal_Reference>
+                  <local_identifier_reference>table</local_identifier_reference>
+                  <local_reference_type>state_table_to_data_table</local_reference_type>
+              </Local_Internal_Reference>
               <nucspec:Applicable_Records>
-                <Local_Internal_Reference>
-                    <local_identifier_reference>table</local_identifier_reference>
-                    <local_reference_type>state_table_to_data_table</local_reference_type>
-                </Local_Internal_Reference>
                 <nucspec:First_Count>
                   <nucspec:first_record>1</nucspec:first_record>
                   <nucspec:record_count>1</nucspec:record_count>
@@ -81,11 +81,11 @@
             </nucspec:State_Table_Entry>
             <nucspec:State_Table_Entry>
               <nucspec:state_index>2</nucspec:state_index>
+              <Local_Internal_Reference>
+                  <local_identifier_reference>table</local_identifier_reference>
+                  <local_reference_type>state_table_to_data_table</local_reference_type>
+              </Local_Internal_Reference>
               <nucspec:Applicable_Records>
-                <Local_Internal_Reference>
-                    <local_identifier_reference>table</local_identifier_reference>
-                    <local_reference_type>state_table_to_data_table</local_reference_type>
-                </Local_Internal_Reference>
                 <nucspec:First_Count>
                   <nucspec:first_record>2</nucspec:first_record>
                   <nucspec:record_count>8000</nucspec:record_count>
