@@ -1,5 +1,5 @@
-CMD=validate
-LDD=~/bin/lddtool-9.0.0/bin/lddtool
+CMD=~/bin/validate-1.21.0/bin/validate
+LDD=~/bin/lddtool-8.0.0/bin/lddtool
 
 echo "Compiling dictionary"
 pushd ..

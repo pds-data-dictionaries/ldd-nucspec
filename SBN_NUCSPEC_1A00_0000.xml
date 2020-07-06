@@ -38,7 +38,7 @@
     <name>state_index</name>
     <version_id>1.0</version_id>
     <local_identifier>nucspec.state_index</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>The state_index points to a row of a look up table containing the instrument settings.</definition>
     <DD_Value_Domain>
@@ -214,7 +214,7 @@
     <local_identifier>nucspec.comment</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Small Bodies Node</submitter_name>
-    <definition>Any notes about the state of the detector at the time of observation.</definition>
+    <definition>Any notes about the state at the time of observation.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>UTF8_Text_Preserved</value_data_type>
@@ -353,6 +353,12 @@
       <identifier_reference>nucspec.state_index</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>nucspec.comment</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
