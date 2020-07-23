@@ -66,13 +66,13 @@
               <lid_reference>urn:nasa:pds:dawn_grand:data:state_table</lid_reference>
               <reference_type>nucspec_product_to_state_table</reference_type>
             </Internal_Reference>
-            <nucspec:State_Table_Entry>
+            <Local_Internal_Reference>
+              <local_identifier_reference>table</local_identifier_reference>
+              <local_reference_type>state_table_to_data_table</local_reference_type>
+          </Local_Internal_Reference>
+          <nucspec:State_Table_Entry>
               <nucspec:state_index xsi:nil="true" nilReason="missing"></nucspec:state_index>
               <nucspec:comment>This state not defined in state table. Refer to ${filename}</nucspec:comment>
-              <Local_Internal_Reference>
-                  <local_identifier_reference>table</local_identifier_reference>
-                  <local_reference_type>state_table_to_data_table</local_reference_type>
-              </Local_Internal_Reference>
               <nucspec:State_Time>
                 <nucspec:state_time_field_name>SCET_UTC</nucspec:state_time_field_name>
                 <nucspec:State_Time_UTC>
