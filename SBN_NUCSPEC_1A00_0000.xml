@@ -594,7 +594,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>applicable_records_require_record_count</local_identifier>
     <rule_context>nucspec:Applicable_Records</rule_context>
-    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>//*[pds:local_identifier=$local_id]/pds:records</rule_test>
@@ -606,7 +606,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>state_table_entry_table_exists</local_identifier>
     <rule_context>nucspec:State_Table_Entry</rule_context>
-    <rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>//(pds:Table_Character | pds:Table_Delimited | pds:Table_Binary)[pds:local_identifier = $local_id]</rule_test>
@@ -619,7 +619,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>last_bounds_check</local_identifier>
     <rule_context>nucspec:First_Last</rule_context>
-    <rule_assign>name="local_id" value="../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
     <rule_assign>name="last_record" value="number(nucspec:last_record)"</rule_assign>
     <DD_Rule_Statement>
@@ -633,7 +633,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>first_count_bounds_check</local_identifier>
     <rule_context>nucspec:First_Count</rule_context>
-    <rule_assign>name="local_id" value="../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
     <rule_assign>name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"</rule_assign>
     <DD_Rule_Statement>
@@ -648,7 +648,7 @@ The record numbers are one-based and inclusive.</definition>
   <DD_Rule>
     <local_identifier>state_time_field_exists</local_identifier>
     <rule_context>nucspec:State_Time</rule_context>
-    <rule_assign>name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="local_id" value="../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <rule_assign>name="field_name" value="nucspec:state_time_field_name"</rule_assign>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
