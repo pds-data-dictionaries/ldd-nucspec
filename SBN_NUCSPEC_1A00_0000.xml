@@ -221,6 +221,66 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
+	<DD_Attribute>
+		<name>condition_type</name>
+		<version_id>1.0</version_id>
+		<local_identifier>nucspec.condition_type</local_identifier>
+		<nillable_flag>true</nillable_flag>
+		<submitter_name>GRaND Instrument</submitter_name>
+		<definition>Remarks about the containing object.</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+			<DD_Permissible_Value>
+				<value>SEP</value>
+				<value_meaning>Solar Energetic Particles</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>Solar Flare</value>
+				<value_meaning>Solar Flare</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>Gamma-ray Burst</value>
+				<value_meaning>Gamma-ray Burst</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>Electron Burst</value>
+				<value_meaning>Electron Burst</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>Data Glitch</value>
+				<value_meaning>Data Glitch</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>condition_active</name>
+		<version_id>1.0</version_id>
+		<local_identifier>nucspec.condition_active</local_identifier>
+		<nillable_flag>true</nillable_flag>
+		<submitter_name>GRaND Instrument</submitter_name>
+		<definition>A flag indicating whether the condition was in effect at the given time.</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Boolean</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+  <DD_Attribute>
+		<name>condition_source</name>
+		<version_id>1.0</version_id>
+		<local_identifier>nucspec.condition_source</local_identifier>
+		<nillable_flag>true</nillable_flag>
+		<submitter_name>GRaND Instrument</submitter_name>
+		<definition>A string identifying the source of the condition at the given time.</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
   <DD_Class>
     <name>NucSpec_Observation_Properties</name>
     <version_id>1.0</version_id>
@@ -245,6 +305,12 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+		<DD_Association>
+			<identifier_reference>nucspec.Observing_Conditions</identifier_reference>
+			<reference_type>component_of</reference_type>
+			<minimum_occurrences>0</minimum_occurrences>
+			<maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
   </DD_Class>
   <DD_Class>
@@ -493,6 +559,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+  
   <DD_Class>
     <name>State_Time_ET</name>
     <version_id>1.0</version_id>
@@ -550,6 +617,58 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
+	<DD_Class>
+		<name>Observing_Conditions</name>
+		<version_id>1.0</version_id>
+		<local_identifier>nucspec.Observing_Conditions</local_identifier>
+		<submitter_name>GRaND Instrument</submitter_name>
+		<definition>some text</definition>
+		<DD_Association>	
+			<identifier_reference>nucspec.condition_type</identifier_reference>
+			<reference_type>attribute_of</reference_type>
+			<minimum_occurrences>1</minimum_occurrences>
+			<maximum_occurrences>1</maximum_occurrences>
+		</DD_Association>
+		<DD_Association> 
+			<identifier_reference>nucspec.Observing_Condition</identifier_reference>
+			<reference_type>component_of</reference_type>
+			<minimum_occurrences>1</minimum_occurrences>
+			<maximum_occurrences>unbounded</maximum_occurrences>
+		</DD_Association>
+	</DD_Class>
+
+	<DD_Class>
+		<name>Observing_Condition</name>
+		<version_id>1.0</version_id>
+		<local_identifier>nucspec.Observing_Condition</local_identifier>
+		<submitter_name>GRaND Instrument</submitter_name>
+		<definition>some text</definition>
+		<DD_Association>	
+			<identifier_reference>XSChoice#</identifier_reference>
+			<identifier_reference>nucspec.condition_active</identifier_reference>
+			<identifier_reference>nucspec.condition_source</identifier_reference>
+			<reference_type>attribute_of</reference_type>
+			<minimum_occurrences>1</minimum_occurrences>
+			<maximum_occurrences>1</maximum_occurrences>
+		</DD_Association>
+		<DD_Association>	
+			<identifier_reference>nucspec.comment</identifier_reference>
+			<reference_type>attribute_of</reference_type>
+			<minimum_occurrences>0</minimum_occurrences>
+			<maximum_occurrences>1</maximum_occurrences>
+		</DD_Association>
+		<DD_Association>	
+			<identifier_reference>XSChoice#</identifier_reference>      
+			<identifier_reference>State_Time_UTC</identifier_reference>
+      <identifier_reference>State_Time_ET</identifier_reference>
+      <identifier_reference>State_Time_SCLK</identifier_reference>
+			<reference_type>component_of</reference_type>
+			<minimum_occurrences>1</minimum_occurrences>
+			<maximum_occurrences>1</maximum_occurrences>
+		</DD_Association>
+	</DD_Class>
+  
 
   <DD_Rule>
     <local_identifier>state_table_ref</local_identifier>
