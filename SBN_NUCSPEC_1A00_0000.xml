@@ -472,9 +472,9 @@
 
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>State_Time_ET</identifier_reference>
-      <identifier_reference>State_Time_SCLK</identifier_reference>
-      <identifier_reference>State_Time_UTC</identifier_reference>
+      <identifier_reference>Time_Range_ET</identifier_reference>
+      <identifier_reference>Time_Range_SCLK</identifier_reference>
+      <identifier_reference>Time_Range_UTC</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -561,9 +561,9 @@ The record numbers are one-based and inclusive.</definition>
   </DD_Class>
   
   <DD_Class>
-    <name>State_Time_ET</name>
+    <name>Time_Range_ET</name>
     <version_id>1.0</version_id>
-    <local_identifier>State_Time_ET</local_identifier>
+    <local_identifier>Time_Range_ET</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Ephemeris time, as defined by the referenced field, for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
@@ -580,9 +580,9 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    <name>State_Time_SCLK</name>
+    <name>Time_Range_SCLK</name>
     <version_id>1.0</version_id>
-    <local_identifier>State_Time_SCLK</local_identifier>
+    <local_identifier>Time_Range_SCLK</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Spacecraft clock time in ticks since spacecraft clock start for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
@@ -599,9 +599,9 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    <name>State_Time_UTC</name>
+    <name>Time_Range_UTC</name>
     <version_id>1.0</version_id>
-    <local_identifier>State_Time_UTC</local_identifier>
+    <local_identifier>Time_Range_UTC</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
     <definition>Universal Coordinated Time for the first and last science data records for a temporally contiguous block of records with the same state. These records need not be contiguous within the file, but there must be no records with a different state between the start and stop time.</definition>
     <DD_Association>
@@ -660,9 +660,9 @@ The record numbers are one-based and inclusive.</definition>
 		</DD_Association>
 		<DD_Association>	
 			<identifier_reference>XSChoice#</identifier_reference>      
-			<identifier_reference>State_Time_UTC</identifier_reference>
-      <identifier_reference>State_Time_ET</identifier_reference>
-      <identifier_reference>State_Time_SCLK</identifier_reference>
+			<identifier_reference>Time_Range_UTC</identifier_reference>
+      <identifier_reference>Time_Range_ET</identifier_reference>
+      <identifier_reference>Time_Range_SCLK</identifier_reference>
 			<reference_type>component_of</reference_type>
 			<minimum_occurrences>1</minimum_occurrences>
 			<maximum_occurrences>1</maximum_occurrences>
