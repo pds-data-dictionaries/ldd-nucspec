@@ -1,3 +1,5 @@
-# Regression Test Directory
+# Failing Tests
 
-Test products should go here. See ldd-template repo for examples: https://github.com/pds-data-dictionaries/ldd-template/tree/master/test
+This directory contains labels that are expected to fail validation.
+
+They are named after the test that they are expected to fail.
