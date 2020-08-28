@@ -64,6 +64,7 @@ jobs:
           test_path: ${{ env.REGRESSION_TEST_PATH }}
           logs_path: ${{ env.LOGS_PATH }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          enable_content_validat: True
 
       - name: Upload LDDs to Github Action Artifacts
         uses: actions/upload-artifact@v1
