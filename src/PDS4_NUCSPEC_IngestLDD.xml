@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A00.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
   <name>nucspec</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
+  <dictionary_type>Discipline</dictionary_type>
   <full_name>Small Bodies Node</full_name>
   <steward_id>sbn</steward_id>
   <namespace_id>nucspec</namespace_id>
