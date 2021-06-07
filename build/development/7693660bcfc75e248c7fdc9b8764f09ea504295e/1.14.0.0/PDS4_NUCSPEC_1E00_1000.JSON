@@ -2,9 +2,11 @@
   {
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
-      "Version": "1.14.0.0" ,
-      "Date": "Fri Aug 28 18:52:46 UTC 2020" ,
+      "IM Version": "1.14.0.0" ,
+      "LDD Version": "1.0.0.0" ,
+      "Date": "Mon Jun 07 18:44:39 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
+      "namespaces": ["pds:", "nucspec:"] ,
       "classDictionary": [
         {
           "class": {
@@ -1197,6 +1199,38 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Data Glitch" ,
+                  "valueMeaning": "Data Glitch" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Electron Burst" ,
+                  "valueMeaning": "Electron Burst" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Gamma-ray Burst" ,
+                  "valueMeaning": "Gamma-ray Burst" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "SEP" ,
+                  "valueMeaning": "Solar Energetic Particles" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Solar Flare" ,
+                  "valueMeaning": "Solar Flare" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
