@@ -1,8 +1,12 @@
 # pds4-dictionary-nucspec
 
-Draft nuclear spectroscopy dictionary.
+Nuclear spectroscopy dictionary.
 
-This is pre-production version of the nuclear spectroscopy dictionary. This is intended for review and comment only, and not for use in production data.
+This dictionary contains classes to support nuclear spectroscopy observations.
+
+## Documentation
+
+The nuclear spectroscopy documentation is available at: https://docs.google.com/document/d/1rI20kFqCNkeI7uGlxpza2yZ2zeXVnCCC_Lsp0hLkmJ4/edit#heading=h.gjdgxs
 
 ## Review
 
