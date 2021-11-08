@@ -1,0 +1,60 @@
+
+PDS Validate Tool Report
+
+Configuration:
+   Version                       2.1.0
+   Date                          2021-11-01T15:21:57Z
+
+Parameters:
+   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/state_table_entry_table_exists_FAIL.xml]
+   Rule Type                     pds4.label
+   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/3c03b81a24c3a290a4dc051298d1d1674c56cfb9/1.15.0.0/PDS4_NUCSPEC_1F00_1000.xsd, file:/tmp/PDS4_PDS_1F00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/3c03b81a24c3a290a4dc051298d1d1674c56cfb9/1.15.0.0/PDS4_NUCSPEC_1F00_1000.sch, file:/tmp/PDS4_PDS_1F00.sch]
+   Severity Level                WARNING
+   Recurse Directories           true
+   File Filters Used             [*.xml, *.XML]
+   Data Content Validation       off
+   Product Level Validation      on
+   Max Errors                    100000
+   Registered Contexts File      /tmp/validate-2.1.0/resources/registered_context_products.json
+
+
+
+Product Level Validation Results
+
+  FAIL: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/state_table_entry_table_exists_FAIL.xml
+      ERROR  [error.label.schema]   line 7, 57: cvc-id.1: There is no ID/IDREF binding for IDREF 'tabl'.
+      ERROR  [error.label.schematron]   line 75, 43: In the nucspec:Applicable_Records class, the local_identifier_reference (tabl) must reference a table with a record count.
+      ERROR  [error.label.schematron]   line 84, 43: In the nucspec:Applicable_Records class, the local_identifier_reference (tabl) must reference a table with a record count.
+      ERROR  [error.label.schematron]   line 76, 37: In the nucspec:First_Last class, the index of the last record (1) must be less than or equal to the record count of the referenced table (NaN).
+      ERROR  [error.label.schematron]   line 85, 37: In the nucspec:First_Last class, the index of the last record (3) must be less than or equal to the record count of the referenced table (NaN).
+      ERROR  [error.label.schematron]   line 73, 38: In the nucspec:State_Table_Entry class, the local_identifier_reference (tabl) must reference a table.
+      ERROR  [error.label.schematron]   line 82, 40: In the nucspec:State_Table_Entry class, the local_identifier_reference (tabl) must reference a table.
+      WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
+      ERROR  [error.label.local_identifier_not_found]   line 70: Referenced Local Identifier 'tabl' does not exist in any of the local_identifier attributes in the label.
+        1 product validation(s) completed
+
+Summary:
+
+  8 error(s)
+  1 warning(s)
+
+  Product Validation Summary:
+    0          product(s) passed
+    1          product(s) failed
+    0          product(s) skipped
+
+  Referential Integrity Check Summary:
+    0          check(s) passed
+    0          check(s) failed
+    0          check(s) skipped
+
+  Message Types:
+    6            error.label.schematron
+    1            error.label.local_identifier_not_found
+    1            error.label.schema
+    1            warning.label.missing_schematron_spec
+
+End of Report
+Completed execution in 6592 ms
+
