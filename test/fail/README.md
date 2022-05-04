@@ -45,3 +45,7 @@ This test has a reference_type that is invalid (should be energy_calibration_to_
 ### applicable_records_require_record_count
 
 This test does not reference a data object with a record count.
+
+### observing_condition_source_or_active
+
+This test has an Observing_Condition with neither a condition_active flag nor a condition_source attribute.

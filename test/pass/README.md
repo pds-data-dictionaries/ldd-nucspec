@@ -118,5 +118,39 @@ Classes exercised:
         * State_Time
           * Time_Range_UTC
   * Observing_Conditions
-    * Observing_Condition
+    * Observing_Condition (with condition_active)
+      * Time_Range_SCLK
+
+### pass_11
+
+Classes exercised:
+
+* NucSpec_Observation_Properties
+  * Energy_Calibration
+    * Polynomial
+      * Polynomial_Term
+  * Instrument_Settings
+    * State_Table
+      * State_Table_Entry
+        * State_Time
+          * Time_Range_UTC
+  * Observing_Conditions
+    * Observing_Condition (with condition_active and condition_source)
+      * Time_Range_SCLK
+
+### pass_12
+
+Classes exercised:
+
+* NucSpec_Observation_Properties
+  * Energy_Calibration
+    * Polynomial
+      * Polynomial_Term
+  * Instrument_Settings
+    * State_Table
+      * State_Table_Entry
+        * State_Time
+          * Time_Range_UTC
+  * Observing_Conditions
+    * Observing_Condition (with condition_source)
       * Time_Range_SCLK
