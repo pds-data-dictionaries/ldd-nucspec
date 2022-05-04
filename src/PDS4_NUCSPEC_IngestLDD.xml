@@ -675,11 +675,15 @@ The record numbers are one-based and inclusive.</definition>
     <submitter_name>GRaND Instrument</submitter_name>
     <definition>Describes the times that the activity affecting nuclear spectroscopy observations was in effect, along with the sources of the activity, if applicable.</definition>
     <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>nucspec.condition_active</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
       <identifier_reference>nucspec.condition_source</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -802,6 +806,16 @@ The record numbers are one-based and inclusive.</definition>
       <rule_test>//(pds:Table_Character | pds:Table_Delimited | pds:Table_Binary)[pds:local_identifier = $local_id]//(pds:Field_Character | pds:Field_Delimited | pds:Field_Binary)[pds:name=$field_name]</rule_test>
       <rule_message>In the nucspec:State_Time class, state_time_field_name (&lt;sch:value-of select='$field_name'/&gt;) must reference a field in the referenced data table (&lt;sch:value-of select='$local_id'/&gt;).</rule_message>
       <rule_description>In the nucspec:State_Time class, state_time_field_name must reference a field in the referenced data table.</rule_description>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
+  <DD_Rule>
+    <local_identifier>observing_condition_source_or_active</local_identifier>
+    <rule_context>nucspec:Observing_Condition</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>(nucspec:condition_source | nucspec:Condition_Active)</rule_test>
+      <rule_message>In the nucspec:Observing_Condition class, condition_source and/or condition_active must be specified.</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
 
