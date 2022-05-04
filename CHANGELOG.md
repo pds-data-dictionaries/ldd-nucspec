@@ -4,7 +4,9 @@
 
 Initial creation
 
-## 2022-05-04 - Next Release (Currently backwards-compatible)
+## 2022-05-04 - Next Release (Non backwards-compatible)
 
 * Whitespace fixes
 * Minor documentation error fixes
+* Corrected units for ET (non-bc)
+* Removed Units_of_None declarations
