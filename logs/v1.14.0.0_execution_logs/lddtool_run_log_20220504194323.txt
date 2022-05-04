@@ -1,16 +1,19 @@
 
->>  INFO LDDTOOL Version: 10.0.0
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO LDDTOOL Version: 14.0.1
+>>  INFO IM Version Id: 1.14.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Wed May 04 18:07:37 UTC 2022
+>>  INFO IM Label Version Id: 1.20
+>>  INFO Date: Wed May 04 19:43:23 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.0.1
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.0.1/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.0.1/lib
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Rule
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Assert
 
->>> INFO Init:  - Config.Properties Namespace Id Found:nucspec
->>> INFO Init:  - Config.Properties Namespace Id Using:nucspec
+>>> INFO Init:  - Config.Properties Namespace Id Using:pds
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <condition_active> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <condition_source> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <first_record> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <last_record> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <record_count> - The default minimum value provided by the attribute's data type is being overridden with 1
@@ -37,15 +40,16 @@
 >>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
 >>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
 >>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> WARNING Init:  - Config.Properties Namespace Id Not Found:nucspec
 
  -- LDDTool Execution Summary --
-     0 warning(s)
+     3 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1E00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -55,9 +59,9 @@ Input:
 
 Output:
 
-     - ./PDS4_NUCSPEC_1H00_1000.xsd
-     - ./PDS4_NUCSPEC_1H00_1000.sch
-     - ./PDS4_NUCSPEC_1H00_1000.xml
-     - ./PDS4_NUCSPEC_1H00_1000.JSON
+     - ./PDS4_NUCSPEC_1E00_1000.xsd
+     - ./PDS4_NUCSPEC_1E00_1000.sch
+     - ./PDS4_NUCSPEC_1E00_1000.xml
+     - ./PDS4_NUCSPEC_1E00_1000.JSON
 
 >>  INFO Exit(0)

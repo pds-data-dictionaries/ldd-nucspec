@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.16.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.22
->>  INFO Date: Wed May 04 18:07:43 UTC 2022
+>>  INFO Date: Wed May 04 19:43:29 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.0.1
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.0.1/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.0.1/lib
@@ -11,6 +11,8 @@
 >>> INFO Init:  - Config.Properties Namespace Id Found:nucspec
 >>> INFO Init:  - Config.Properties Namespace Id Using:nucspec
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <condition_active> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <condition_source> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <first_record> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <last_record> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <record_count> - The default minimum value provided by the attribute's data type is being overridden with 1

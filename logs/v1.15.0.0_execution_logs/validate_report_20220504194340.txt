@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.2.0
-   Date                          2022-05-04T18:09:23Z
+   Date                          2022-05-04T19:43:41Z
 
 Parameters:
-   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/applicable_records_local_reference_type_FAIL.xml]
+   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/pass/pass_10_VALID.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/e86261ce8c91d13be15e8f4785dbea2fe31178e8/1.17.0.0/PDS4_NUCSPEC_1H00_1000.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/e86261ce8c91d13be15e8f4785dbea2fe31178e8/1.17.0.0/PDS4_NUCSPEC_1H00_1000.sch, file:/tmp/PDS4_PDS_1H00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/d15b77fe5fafb43f6f825d357a99cd01f465621a/1.15.0.0/PDS4_NUCSPEC_1F00_1000.xsd, file:/tmp/PDS4_PDS_1F00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/d15b77fe5fafb43f6f825d357a99cd01f465621a/1.15.0.0/PDS4_NUCSPEC_1F00_1000.sch, file:/tmp/PDS4_PDS_1F00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,8 +22,8 @@ Parameters:
 
 Product Level Validation Results
 
-  FAIL: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/applicable_records_local_reference_type_FAIL.xml
-      ERROR  [error.label.schematron]   line 66, 39: In the nucspec:Applicable_Records class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.
+  FAIL: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/pass/pass_10_VALID.xml
+      ERROR  [error.label.schematron]   line 92, 40: In the nucspec:Observing_Condition class, condition_source and/or condition_active must be specified.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
         1 product validation(s) completed
 
@@ -47,5 +47,5 @@ Summary:
     1            warning.label.missing_schematron_spec
 
 End of Report
-Completed execution in 4133 ms
+Completed execution in 4760 ms
 
