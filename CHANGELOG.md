@@ -8,3 +8,4 @@ Initial creation
 
 * Whitespace fixes
 * Minor documentation error fixes
+* Added the ability to simultaneously specify condition_active and condition_source
