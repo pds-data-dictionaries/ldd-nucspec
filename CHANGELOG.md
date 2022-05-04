@@ -7,3 +7,4 @@ Initial creation
 ## 2022-05-04 - Next Release (Currently backwards-compatible)
 
 * Whitespace fixes
+* Minor documentation error fixes
