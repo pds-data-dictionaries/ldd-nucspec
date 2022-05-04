@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
   <name>nucspec</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
   <dictionary_type>Discipline</dictionary_type>
@@ -9,6 +8,7 @@
   <namespace_id>nucspec</namespace_id>
   <comment>This dictionary covers nuclear spectroscopy observations.</comment>
   <last_modification_date_time>2019-05-21T18:44:16Z</last_modification_date_time>
+
   <DD_Attribute>
     <name>coefficient</name>
     <version_id>1.0</version_id>
@@ -22,6 +22,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>order</name>
     <version_id>1.0</version_id>
@@ -35,6 +36,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>state_index</name>
     <version_id>1.0</version_id>
@@ -48,6 +50,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>first_record</name>
     <version_id>1.0</version_id>
@@ -62,6 +65,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>last_record</name>
     <version_id>1.0</version_id>
@@ -76,6 +80,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>record_count</name>
     <version_id>1.0</version_id>
@@ -90,6 +95,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>state_time_field_name</name>
     <version_id>1.0</version_id>
@@ -103,6 +109,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>et_start</name>
     <version_id>1.0</version_id>
@@ -116,6 +123,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>et_stop</name>
     <version_id>1.0</version_id>
@@ -129,6 +137,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>sclk_start_time</name>
     <version_id>1.0</version_id>
@@ -143,6 +152,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>sclk_stop_time</name>
     <version_id>1.0</version_id>
@@ -157,6 +167,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>utc_start_time</name>
     <version_id>1.0</version_id>
@@ -170,6 +181,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>utc_stop_time</name>
     <version_id>1.0</version_id>
@@ -183,6 +195,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>name</name>
     <version_id>1.0</version_id>
@@ -196,6 +209,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>description</name>
     <version_id>1.0</version_id>
@@ -209,6 +223,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+
   <DD_Attribute>
     <name>comment</name>
     <version_id>1.0</version_id>
@@ -223,64 +238,65 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-	<DD_Attribute>
-		<name>condition_type</name>
-		<version_id>1.0</version_id>
-		<local_identifier>nucspec.condition_type</local_identifier>
-		<nillable_flag>true</nillable_flag>
-		<submitter_name>GRaND Instrument</submitter_name>
-		<definition>Remarks about the containing object.</definition>
-		<DD_Value_Domain>
-			<enumeration_flag>true</enumeration_flag>
-			<value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-			<DD_Permissible_Value>
-				<value>SEP</value>
-				<value_meaning>Solar Energetic Particles</value_meaning>
-			</DD_Permissible_Value>
-			<DD_Permissible_Value>
-				<value>Solar Flare</value>
-				<value_meaning>Solar Flare</value_meaning>
-			</DD_Permissible_Value>
-			<DD_Permissible_Value>
-				<value>Gamma-ray Burst</value>
-				<value_meaning>Gamma-ray Burst</value_meaning>
-			</DD_Permissible_Value>
-			<DD_Permissible_Value>
-				<value>Electron Burst</value>
-				<value_meaning>Electron Burst</value_meaning>
-			</DD_Permissible_Value>
-			<DD_Permissible_Value>
-				<value>Data Glitch</value>
-				<value_meaning>Data Glitch</value_meaning>
-			</DD_Permissible_Value>
-		</DD_Value_Domain>
-	</DD_Attribute>
-
-	<DD_Attribute>
-		<name>condition_active</name>
-		<version_id>1.0</version_id>
-		<local_identifier>nucspec.condition_active</local_identifier>
-		<nillable_flag>true</nillable_flag>
-		<submitter_name>GRaND Instrument</submitter_name>
-		<definition>A flag indicating whether the condition was in effect at the given time.</definition>
-		<DD_Value_Domain>
-			<enumeration_flag>false</enumeration_flag>
-			<value_data_type>ASCII_Boolean</value_data_type>
-		</DD_Value_Domain>
-	</DD_Attribute>
+  <DD_Attribute>
+    <name>condition_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.condition_type</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>GRaND Instrument</submitter_name>
+    <definition>Remarks about the containing object.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>SEP</value>
+        <value_meaning>Solar Energetic Particles</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Solar Flare</value>
+        <value_meaning>Solar Flare</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Gamma-ray Burst</value>
+        <value_meaning>Gamma-ray Burst</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Electron Burst</value>
+        <value_meaning>Electron Burst</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Data Glitch</value>
+        <value_meaning>Data Glitch</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
 
   <DD_Attribute>
-		<name>condition_source</name>
-		<version_id>1.0</version_id>
-		<local_identifier>nucspec.condition_source</local_identifier>
-		<nillable_flag>true</nillable_flag>
-		<submitter_name>GRaND Instrument</submitter_name>
-		<definition>A string identifying the source of the condition at the given time.</definition>
-		<DD_Value_Domain>
-			<enumeration_flag>false</enumeration_flag>
-			<value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-		</DD_Value_Domain>
-	</DD_Attribute>
+    <name>condition_active</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.condition_active</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>GRaND Instrument</submitter_name>
+    <definition>A flag indicating whether the condition was in effect at the given time.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Boolean</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>condition_source</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.condition_source</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>GRaND Instrument</submitter_name>
+    <definition>A string identifying the source of the condition at the given time.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
 
   <DD_Class>
     <name>NucSpec_Observation_Properties</name>
@@ -307,13 +323,14 @@
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-		<DD_Association>
-			<identifier_reference>nucspec.Observing_Conditions</identifier_reference>
-			<reference_type>component_of</reference_type>
-			<minimum_occurrences>0</minimum_occurrences>
-			<maximum_occurrences>*</maximum_occurrences>
+    <DD_Association>
+      <identifier_reference>nucspec.Observing_Conditions</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Energy_Calibration</name>
     <version_id>1.0</version_id>
@@ -333,6 +350,7 @@
       <maximum_occurrences>unbounded</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Calibration_Reference</name>
     <version_id>1.0</version_id>
@@ -346,6 +364,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Instrument_Settings</name>
     <version_id>1.0</version_id>
@@ -359,6 +378,7 @@
       <maximum_occurrences>unbounded</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Polynomial</name>
     <version_id>1.0</version_id>
@@ -372,6 +392,7 @@
       <maximum_occurrences>unbounded</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Polynomial_Term</name>
     <version_id>1.0</version_id>
@@ -391,6 +412,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>State_Table</name>
     <version_id>1.0</version_id>
@@ -416,6 +438,7 @@
       <maximum_occurrences>unbounded</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>State_Table_Entry</name>
     <version_id>1.0</version_id>
@@ -443,6 +466,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Applicable_Records</name>
     <version_id>1.0</version_id>
@@ -458,6 +482,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>State_Time</name>
     <version_id>1.0</version_id>
@@ -470,7 +495,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>Time_Range_ET</identifier_reference>
@@ -481,12 +505,12 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>First_Last</name>
     <version_id>1.0</version_id>
     <local_identifier>First_Last</local_identifier>
     <submitter_name>Small Bodies Node</submitter_name>
-
     <definition>Defines the first and last records for which this state applies.
 
 The record numbers are one-based and inclusive.</definition>
@@ -503,6 +527,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>First_Count</name>
     <version_id>1.0</version_id>
@@ -522,6 +547,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Detectors</name>
     <version_id>1.0</version_id>
@@ -535,6 +561,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>unbounded</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Detector</name>
     <version_id>1.0</version_id>
@@ -560,7 +587,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
   <DD_Class>
     <name>Time_Range_ET</name>
     <version_id>1.0</version_id>
@@ -580,6 +607,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Time_Range_SCLK</name>
     <version_id>1.0</version_id>
@@ -599,6 +627,7 @@ The record numbers are one-based and inclusive.</definition>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <DD_Class>
     <name>Time_Range_UTC</name>
     <version_id>1.0</version_id>
@@ -619,57 +648,57 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Association>
   </DD_Class>
 
-	<DD_Class>
-		<name>Observing_Conditions</name>
-		<version_id>1.0</version_id>
-		<local_identifier>nucspec.Observing_Conditions</local_identifier>
-		<submitter_name>GRaND Instrument</submitter_name>
-		<definition>Describes activity that may affect nuclear spectroscopy observations.</definition>
-		<DD_Association>	
-			<identifier_reference>nucspec.condition_type</identifier_reference>
-			<reference_type>attribute_of</reference_type>
-			<minimum_occurrences>1</minimum_occurrences>
-			<maximum_occurrences>1</maximum_occurrences>
-		</DD_Association>
-		<DD_Association> 
-			<identifier_reference>nucspec.Observing_Condition</identifier_reference>
-			<reference_type>component_of</reference_type>
-			<minimum_occurrences>1</minimum_occurrences>
-			<maximum_occurrences>unbounded</maximum_occurrences>
-		</DD_Association>
-	</DD_Class>
+  <DD_Class>
+    <name>Observing_Conditions</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.Observing_Conditions</local_identifier>
+    <submitter_name>GRaND Instrument</submitter_name>
+    <definition>Describes activity that may affect nuclear spectroscopy observations.</definition>
+    <DD_Association>
+      <identifier_reference>nucspec.condition_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>nucspec.Observing_Condition</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
 
-	<DD_Class>
-		<name>Observing_Condition</name>
-		<version_id>1.0</version_id>
-		<local_identifier>nucspec.Observing_Condition</local_identifier>
-		<submitter_name>GRaND Instrument</submitter_name>
-		<definition>Describes the times that the activity affecting nuclear spectroscopy observations was in effect, along with the sources of the activity, if applicable.</definition>
-		<DD_Association>	
-			<identifier_reference>XSChoice#</identifier_reference>
-			<identifier_reference>nucspec.condition_active</identifier_reference>
-			<identifier_reference>nucspec.condition_source</identifier_reference>
-			<reference_type>attribute_of</reference_type>
-			<minimum_occurrences>1</minimum_occurrences>
-			<maximum_occurrences>1</maximum_occurrences>
-		</DD_Association>
-		<DD_Association>	
-			<identifier_reference>nucspec.comment</identifier_reference>
-			<reference_type>attribute_of</reference_type>
-			<minimum_occurrences>0</minimum_occurrences>
-			<maximum_occurrences>1</maximum_occurrences>
-		</DD_Association>
-		<DD_Association>	
-			<identifier_reference>XSChoice#</identifier_reference>      
-			<identifier_reference>Time_Range_UTC</identifier_reference>
+  <DD_Class>
+    <name>Observing_Condition</name>
+    <version_id>1.0</version_id>
+    <local_identifier>nucspec.Observing_Condition</local_identifier>
+    <submitter_name>GRaND Instrument</submitter_name>
+    <definition>Describes the times that the activity affecting nuclear spectroscopy observations was in effect, along with the sources of the activity, if applicable.</definition>
+    <DD_Association>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>nucspec.condition_active</identifier_reference>
+      <identifier_reference>nucspec.condition_source</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>nucspec.comment</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>Time_Range_UTC</identifier_reference>
       <identifier_reference>Time_Range_ET</identifier_reference>
       <identifier_reference>Time_Range_SCLK</identifier_reference>
-			<reference_type>component_of</reference_type>
-			<minimum_occurrences>1</minimum_occurrences>
-			<maximum_occurrences>1</maximum_occurrences>
-		</DD_Association>
-	</DD_Class>
-  
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
 
   <DD_Rule>
     <local_identifier>state_table_ref</local_identifier>
@@ -735,7 +764,6 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Rule_Statement>
   </DD_Rule>
 
-
   <DD_Rule>
     <local_identifier>last_bounds_check</local_identifier>
     <rule_context>nucspec:First_Last</rule_context>
@@ -764,7 +792,6 @@ The record numbers are one-based and inclusive.</definition>
     </DD_Rule_Statement>
   </DD_Rule>
 
-
   <DD_Rule>
     <local_identifier>state_time_field_exists</local_identifier>
     <rule_context>nucspec:State_Time</rule_context>
@@ -776,6 +803,6 @@ The record numbers are one-based and inclusive.</definition>
       <rule_message>In the nucspec:State_Time class, state_time_field_name (&lt;sch:value-of select='$field_name'/&gt;) must reference a field in the referenced data table (&lt;sch:value-of select='$local_id'/&gt;).</rule_message>
       <rule_description>In the nucspec:State_Time class, state_time_field_name must reference a field in the referenced data table.</rule_description>
     </DD_Rule_Statement>
-  </DD_Rule>  
+  </DD_Rule>
 
 </Ingest_LDD>
