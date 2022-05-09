@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 09 22:15:19 UTC 2022 -->
+  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 09 23:06:42 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -18,6 +18,16 @@
 		   <!--        lists. These two types of rules have been -->
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
+  <sch:pattern>
+    <sch:rule context="nucspec:First_Count">
+      <sch:let name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"/>
+      <sch:let name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"/>
+      <sch:let name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"/>
+      <sch:assert test="$record_count >= $last_record">
+        <title>aaa/Rule</title>
+        In the nucspec:First_Count class, the index of the last record (<sch:value-of select='$last_record'/>) must be less than or equal to the record count of the referenced table (<sch:value-of select='$record_count'/>).</sch:assert>
+    </sch:rule>
+  </sch:pattern>
   <sch:pattern>
     <sch:rule context="nucspec:State_Table/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = ('state_table_to_data_table')">
@@ -45,7 +55,7 @@
       <sch:let name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"/>
       <sch:let name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"/>
       <sch:let name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"/>
-      <sch:assert test="$record_count >= $last_record">
+      <sch:assert test="$last_record le $record_count">
         <title>first_count_bounds_check/Rule</title>
         In the nucspec:First_Count class, the index of the last record (<sch:value-of select='$last_record'/>) must be less than or equal to the record count of the referenced table (<sch:value-of select='$record_count'/>).</sch:assert>
     </sch:rule>
@@ -62,7 +72,7 @@
       <sch:let name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"/>
       <sch:let name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"/>
       <sch:let name="last_record" value="number(nucspec:last_record)"/>
-      <sch:assert test="$record_count >= $last_record">
+      <sch:assert test="$last_record le $record_count">
         <title>last_bounds_check/Rule</title>
         In the nucspec:First_Last class, the index of the last record (<sch:value-of select='$last_record'/>) must be less than or equal to the record count of the referenced table (<sch:value-of select='$record_count'/>).</sch:assert>
     </sch:rule>
