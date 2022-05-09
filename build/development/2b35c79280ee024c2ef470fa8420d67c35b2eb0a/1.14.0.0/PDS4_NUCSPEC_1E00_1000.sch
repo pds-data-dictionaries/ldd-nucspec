@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon Nov 01 15:18:18 UTC 2021 -->
-  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
+  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 09 22:21:47 UTC 2022 -->
+  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -22,7 +22,7 @@
     <sch:rule context="nucspec:State_Table/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = ('state_table_to_data_table')">
         <title>applicable_records_local_reference_type/Rule</title>
-        In the nucspec:Applicable_Records class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</sch:assert>
+        In the nucspec:State_Table class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -72,6 +72,13 @@
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('Data Glitch', 'Electron Burst', 'Gamma-ray Burst', 'SEP', 'Solar Flare')))) then false() else true()">
         <title>nucspec:Observing_Conditions/nucspec:condition_type/nucspec:condition_type</title>
         The attribute nucspec:Observing_Conditions/nucspec:condition_type must be nulled or equal to one of the following values 'Data Glitch', 'Electron Burst', 'Gamma-ray Burst', 'SEP', 'Solar Flare'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="nucspec:Observing_Condition">
+      <sch:assert test="(nucspec:condition_source | nucspec:condition_active)">
+        <title>observing_condition_source_or_active/Rule</title>
+        In the nucspec:Observing_Condition class, condition_source and/or condition_active must be specified.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
