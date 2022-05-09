@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        13.1.0
+   LDDTool Version        14.0.1
    LDD Version Id:        1.0.0.0
    LDD Label Version Id:  1.20
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Nov 01 15:18:17 UTC 2021
+   Time                   Mon May 09 21:51:47 UTC 2022
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -119,7 +119,7 @@ Parsed Input - Attributes:
    name                   utc_stop_time
    version                1.14
    value data type        ASCII_Date_Time_YMD_UTC
-   description            The earliest Universal Coordinated Time for which this state or condition is applicable.
+   description            The latest Universal Coordinated Time for which this state or condition is applicable.
 
    name                   name
    version                1.14
@@ -216,7 +216,7 @@ Parsed Input - Classes:
       reference type        component_of
 
    name                   Instrument_Settings
-   description            This class specifies instrument settings. Instrument settings may be driven via a state table, which may be associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply.
+   description            This class specifies instrument settings. Instrument settings are driven via a state table, which are associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply.
    is abstract            false
    is choice              false
    subclass of            USER
@@ -283,7 +283,7 @@ Parsed Input - Classes:
       reference type        component_of
 
    name                   State_Table_Entry
-   description            Associates individual observations in the data product with a record in the state table, providing additonal information on those observations.
+   description            Associates individual observations in the data product with a record in the state table, providing additional information on those observations.
    is abstract            false
    is choice              true
    subclass of            USER

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:nucspec  Version:1.0.0.0 - Mon Jun 07 18:44:39 UTC 2021 -->
+  <!-- PDS4 XML/Schema for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 09 21:51:47 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.14.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.0.0.0 - nucspec: - nucspec                                              -->
-  <!--   file:/home/runner/work/ldd-nucspec/ldd-nucspec/src/PDS4_NUCSPEC_IngestL -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/nucspec/v1"
@@ -111,10 +110,10 @@ This dictionary covers nuclear spectroscopy observations.
   <xs:complexType name="Instrument_Settings">
     <xs:annotation>
       <xs:documentation>This class specifies instrument settings.
-        Instrument settings may be driven via a state table, which may
-        be associated with specific observations within the data
-        product, either by directly indicating those records, or
-        indicating the observation times at which certain states
+        Instrument settings are driven via a state table, which are
+        associated with specific observations within the data product,
+        either by directly indicating those records, or indicating the
+        observation times at which certain states
         apply.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -208,7 +207,7 @@ This dictionary covers nuclear spectroscopy observations.
   <xs:complexType name="State_Table_Entry">
     <xs:annotation>
       <xs:documentation>Associates individual observations in the data
-        product with a record in the state table, providing additonal
+        product with a record in the state table, providing additional
         information on those observations.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -498,8 +497,8 @@ This dictionary covers nuclear spectroscopy observations.
 
   <xs:simpleType name="utc_stop_time">
     <xs:annotation>
-      <xs:documentation>The earliest Universal Coordinated Time for
-        which this state or condition is applicable.</xs:documentation>
+      <xs:documentation>The latest Universal Coordinated Time for which
+        this state or condition is applicable.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
