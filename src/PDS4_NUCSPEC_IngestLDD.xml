@@ -814,7 +814,7 @@ The record numbers are one-based and inclusive.</definition>
     <rule_context>nucspec:Observing_Condition</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>(nucspec:condition_source | nucspec:Condition_Active)</rule_test>
+      <rule_test>(nucspec:condition_source | nucspec:condition_active)</rule_test>
       <rule_message>In the nucspec:Observing_Condition class, condition_source and/or condition_active must be specified.</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
