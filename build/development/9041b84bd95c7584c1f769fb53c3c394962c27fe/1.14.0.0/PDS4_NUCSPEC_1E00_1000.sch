@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 09 23:15:05 UTC 2022 -->
+  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 09 23:25:26 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -70,8 +70,8 @@
   <sch:pattern>
     <sch:rule context="nucspec:First_Last">
       <sch:let name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"/>
-      <sch:let name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"/>
-      <sch:let name="last_record" value="number(nucspec:last_record)"/>
+      <sch:let name="record_count" value="//*[pds:local_identifier=$local_id]/pds:records"/>
+      <sch:let name="last_record" value="nucspec:last_record"/>
       <sch:assert test="$last_record le $record_count">
         <title>last_bounds_check/Rule</title>
         In the nucspec:First_Last class, the index of the last record (<sch:value-of select='$last_record'/>) must be less than or equal to the record count of the referenced table (<sch:value-of select='$record_count'/>).</sch:assert>

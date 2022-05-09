@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.2.0
-   Date                          2022-05-09T23:18:10Z
+   Date                          2022-05-09T23:28:59Z
 
 Parameters:
-   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/last_bounds_check_FAIL.xml]
+   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/fail_first_last_ordering_FAIL.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/f73bdbe5925696fa783a0c925107ecd7ec173c9b/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xsd, file:/tmp/PDS4_PDS_1E00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/f73bdbe5925696fa783a0c925107ecd7ec173c9b/1.14.0.0/PDS4_NUCSPEC_1E00_1000.sch, file:/tmp/PDS4_PDS_1E00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/9041b84bd95c7584c1f769fb53c3c394962c27fe/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xsd, file:/tmp/PDS4_PDS_1E00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/9041b84bd95c7584c1f769fb53c3c394962c27fe/1.14.0.0/PDS4_NUCSPEC_1E00_1000.sch, file:/tmp/PDS4_PDS_1E00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,8 +22,8 @@ Parameters:
 
 Product Level Validation Results
 
-  FAIL: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/last_bounds_check_FAIL.xml
-      ERROR  [error.label.schematron]   line 82, 37: In the nucspec:First_Last class, the index of the last record (70000) must be less than or equal to the record count of the referenced table (8023).
+  FAIL: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/fail_first_last_ordering_FAIL.xml
+      ERROR  [error.label.schematron]   line 73, 37: In the nucspec:First_Last class, the index of the last record must be greater than or equal to the index of the first record.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
         1 product validation(s) completed
 
@@ -47,5 +47,5 @@ Summary:
     1            warning.label.missing_schematron_spec
 
 End of Report
-Completed execution in 4581 ms
+Completed execution in 5901 ms
 
