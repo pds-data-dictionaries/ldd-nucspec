@@ -785,7 +785,7 @@ The record numbers are one-based and inclusive.</definition>
     <rule_assign>name="last_record" value="number(nucspec:last_record)"</rule_assign>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>$record_count >= $last_record</rule_test>
+      <rule_test>$last_record le $record_count</rule_test>
       <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
       <rule_description>In the nucspec:First_Last class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
     </DD_Rule_Statement>
@@ -799,7 +799,7 @@ The record numbers are one-based and inclusive.</definition>
     <rule_assign>name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"</rule_assign>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>$record_count >= $last_record</rule_test>
+      <rule_test>$last_record le $record_count</rule_test>
       <rule_message>In the nucspec:First_Count class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
       <rule_description>In the nucspec:First_Count class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
     </DD_Rule_Statement>
@@ -817,5 +817,20 @@ The record numbers are one-based and inclusive.</definition>
       <rule_description>In the nucspec:State_Time class, state_time_field_name must reference a field in the referenced data table.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
+
+  <DD_Rule>
+    <local_identifier>aaa</local_identifier>
+    <rule_context>nucspec:First_Count</rule_context>
+    <rule_assign>name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+    <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
+    <rule_assign>name="last_record" value="number(nucspec:first_record) + number(nucspec:record_count) - 1"</rule_assign>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>$record_count >= $last_record</rule_test>
+      <rule_message>In the nucspec:First_Count class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
+      <rule_description>In the nucspec:First_Count class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
 
 </Ingest_LDD>
