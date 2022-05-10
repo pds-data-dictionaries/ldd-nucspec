@@ -1,6 +1,6 @@
 # pds4-dictionary-nucspec
 
-The Nuclear Spectroscopy (nucspec) namespace contains classes to support nuclear spectroscopy observations.
+The Nuclear Spectroscopy (nucspec) namespace supports nuclear spectroscopy observations, including gamma ray and neutron spectroscopy.
 
 Steward: [Jesse Stone, SBN](@jstone-psi)
 
