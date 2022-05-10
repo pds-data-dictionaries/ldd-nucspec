@@ -327,7 +327,7 @@
       <identifier_reference>nucspec.Observing_Conditions</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>*</maximum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
     </DD_Association>
   </DD_Class>
 
