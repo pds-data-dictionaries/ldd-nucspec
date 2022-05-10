@@ -9,3 +9,5 @@ Initial creation
 * Whitespace fixes
 * Minor documentation error fixes
 * Added a rule that constrains Local_Internal_Reference to a single local_identifier_reference, since the new IM will allow multiples.
+* Now allows both condition_source and condition_active flags. 
+  * This change doesn't invalidate any labels, but anything that reads the labels may need to be updated.
