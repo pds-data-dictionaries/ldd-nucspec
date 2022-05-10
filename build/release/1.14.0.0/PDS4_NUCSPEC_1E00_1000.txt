@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon May 09 22:15:19 UTC 2022
+   Time                   Tue May 10 15:29:59 UTC 2022
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -181,7 +181,7 @@ Parsed Input - Classes:
 
       local identifier      nucspec.Observing_Conditions
       minimum occurrences   0
-      maximum occurrences   *
+      maximum occurrences   unbounded
       reference type        component_of
 
    name                   Energy_Calibration
