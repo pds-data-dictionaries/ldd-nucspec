@@ -670,7 +670,7 @@ The record numbers are one-based and inclusive.</definition>
 
   <DD_Class>
     <name>Observing_Condition</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>nucspec.Observing_Condition</local_identifier>
     <submitter_name>GRaND Instrument</submitter_name>
     <definition>Describes the times that the activity affecting nuclear spectroscopy observations was in effect, along with the sources of the activity, if applicable.</definition>
