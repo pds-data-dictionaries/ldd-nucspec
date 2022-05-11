@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.2.0
-   Date                          2022-05-11T18:28:39Z
+   Date                          2022-05-11T18:35:58Z
 
 Parameters:
    Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/fail/state_table_entry_table_exists_FAIL.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/534895c7de99163b5a244eba6894bddb588aa434/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xsd, file:/tmp/PDS4_PDS_1E00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/534895c7de99163b5a244eba6894bddb588aa434/1.14.0.0/PDS4_NUCSPEC_1E00_1000.sch, file:/tmp/PDS4_PDS_1E00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/d80a75a65a27cad56a2e9681ad05de256d21dde9/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xsd, file:/tmp/PDS4_PDS_1E00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/d80a75a65a27cad56a2e9681ad05de256d21dde9/1.14.0.0/PDS4_NUCSPEC_1E00_1000.sch, file:/tmp/PDS4_PDS_1E00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -56,5 +56,5 @@ Summary:
     1            warning.label.missing_schematron_spec
 
 End of Report
-Completed execution in 4528 ms
+Completed execution in 5797 ms
 
