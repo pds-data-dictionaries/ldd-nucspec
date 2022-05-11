@@ -3,16 +3,16 @@ PDS4 Local Data Dictionary Processing Report
 Configuration:
    LDDTool Version        14.0.1
    LDD Version Id:        1.0.0.0
-   LDD Label Version Id:  1.20
+   LDD Label Version Id:  1.24
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed May 11 18:24:51 UTC 2022
-   Common Schema          [PDS4_PDS_1E00.xsd]
-   Common Schematron      [PDS4_PDS_1E00.sch]
-   IM Version Id:         1.14.0.0
+   Time                   Wed May 11 20:20:42 UTC 2022
+   Common Schema          [PDS4_PDS_1I00.xsd]
+   Common Schematron      [PDS4_PDS_1I00.sch]
+   IM Version Id:         1.18.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.20
+   IM Label Version Id:   1.24
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -51,105 +51,105 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   coefficient
-   version                1.14
+   version                1.18
    value data type        ASCII_Real
    description            The coefficient of a single term of the polynomial relating channel number to pulse height.
 
    name                   order
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The order of a single term of the polynomial relating channel number to pulse height.
 
    name                   state_index
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The state_index points to a row of a look up table containing the instrument settings.
    nillable               true
 
    name                   first_record
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The first record for which the state applies, inclusive.
    minimum value          1
 
    name                   last_record
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The last record for which this state applies, inclusive.
    minimum value          1
 
    name                   record_count
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The number of consecutive records, including the first, for which this state applies.
    minimum value          1
 
    name                   state_time_field_name
-   version                1.14
+   version                1.18
    value data type        UTF8_String
    description            The name of the field in the referenced data table that contains the time.
 
    name                   et_start
-   version                1.14
+   version                1.18
    value data type        ASCII_Real
    description            The earliest ephemeris time, as defined by the referenced field, for which this state or condition is applicable.
 
    name                   et_stop
-   version                1.14
+   version                1.18
    value data type        ASCII_Real
    description            The latest ephemeris time, as defined by the referenced field, for which this state or condition is applicable.
 
    name                   sclk_start_time
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The earliest spacecraft clock time, in ticks since spacecraft clock start, for which this state or condition is applicable.
    minimum value          0
 
    name                   sclk_stop_time
-   version                1.14
+   version                1.18
    value data type        ASCII_Integer
    description            The latest spacecraft clock time, in ticks since spacecraft clock start, for which this state or condition is applicable.
    minimum value          0
 
    name                   utc_start_time
-   version                1.14
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The earliest Universal Coordinated Time for which this state or condition is applicable.
 
    name                   utc_stop_time
-   version                1.14
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The latest Universal Coordinated Time for which this state or condition is applicable.
 
    name                   name
-   version                1.14
+   version                1.18
    value data type        UTF8_Short_String_Collapsed
    description            The name of the detector.
 
    name                   description
-   version                1.14
+   version                1.18
    value data type        UTF8_Text_Preserved
    description            A description for the detector.
 
    name                   comment
-   version                1.14
+   version                1.18
    value data type        UTF8_Text_Preserved
    description            Any notes about the state at the time of observation.
 
    name                   condition_type
-   version                1.14
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Remarks about the containing object.
    nillable               true
 
    name                   condition_active
-   version                1.14
+   version                1.18
    value data type        ASCII_Boolean
    description            A flag indicating whether the condition was in effect at the given time.
    nillable               true
 
    name                   condition_source
-   version                1.14
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            A string identifying the source of the condition at the given time.
    nillable               true
