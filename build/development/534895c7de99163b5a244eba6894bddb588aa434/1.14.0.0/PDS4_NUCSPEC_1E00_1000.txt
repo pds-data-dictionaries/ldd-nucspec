@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue May 10 17:07:40 UTC 2022
+   Time                   Wed May 11 18:24:51 UTC 2022
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -164,22 +164,22 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.Energy_Calibration
+      local identifier      Energy_Calibration
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      nucspec.Instrument_Settings
+      local identifier      Instrument_Settings
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      nucspec.Detectors
+      local identifier      Detectors
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      nucspec.Observing_Conditions
+      local identifier      Observing_Conditions
       minimum occurrences   0
       maximum occurrences   unbounded
       reference type        component_of
@@ -192,12 +192,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.Polynomial
+      local identifier      Polynomial
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      nucspec.Calibration_Reference
+      local identifier      Calibration_Reference
       minimum occurrences   0
       maximum occurrences   unbounded
       reference type        component_of
@@ -223,7 +223,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.State_Table
+      local identifier      State_Table
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -236,7 +236,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.Polynomial_Term
+      local identifier      Polynomial_Term
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -249,12 +249,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.order
+      local identifier      order
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.coefficient
+      local identifier      coefficient
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -277,7 +277,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      nucspec.State_Table_Entry
+      local identifier      State_Table_Entry
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -290,12 +290,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.state_index
+      local identifier      state_index
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.comment
+      local identifier      comment
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -336,7 +336,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.state_time_field_name
+      local identifier      state_time_field_name
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -364,12 +364,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.first_record
+      local identifier      first_record
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.last_record
+      local identifier      last_record
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -382,12 +382,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.first_record
+      local identifier      first_record
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.record_count
+      local identifier      record_count
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -400,7 +400,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.Detector
+      local identifier      Detector
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -413,17 +413,17 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.name
+      local identifier      name
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.description
+      local identifier      description
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.comment
+      local identifier      comment
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -436,12 +436,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.et_start
+      local identifier      et_start
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.et_stop
+      local identifier      et_stop
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -454,12 +454,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.sclk_start_time
+      local identifier      sclk_start_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.sclk_stop_time
+      local identifier      sclk_stop_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -472,12 +472,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.utc_start_time
+      local identifier      utc_start_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.utc_stop_time
+      local identifier      utc_stop_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -490,12 +490,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.condition_type
+      local identifier      condition_type
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.Observing_Condition
+      local identifier      Observing_Condition
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -508,17 +508,17 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      nucspec.condition_active
+      local identifier      condition_active
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.condition_source
+      local identifier      condition_source
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      nucspec.comment
+      local identifier      comment
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of

@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.2.0
-   Date                          2022-05-10T17:08:00Z
+   Date                          2022-05-11T18:25:07Z
 
 Parameters:
-   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/7a929b55f5d918863358276d06f5b566fa6e7a89/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xml]
+   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/534895c7de99163b5a244eba6894bddb588aa434/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/7a929b55f5d918863358276d06f5b566fa6e7a89/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xsd, file:/tmp/PDS4_PDS_1E00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/7a929b55f5d918863358276d06f5b566fa6e7a89/1.14.0.0/PDS4_NUCSPEC_1E00_1000.sch, file:/tmp/PDS4_PDS_1E00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/534895c7de99163b5a244eba6894bddb588aa434/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xsd, file:/tmp/PDS4_PDS_1E00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/534895c7de99163b5a244eba6894bddb588aa434/1.14.0.0/PDS4_NUCSPEC_1E00_1000.sch, file:/tmp/PDS4_PDS_1E00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/7a929b55f5d918863358276d06f5b566fa6e7a89/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xml
+  PASS: file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/534895c7de99163b5a244eba6894bddb588aa434/1.14.0.0/PDS4_NUCSPEC_1E00_1000.xml
         1 product validation(s) completed
 
 Summary:
@@ -42,5 +42,5 @@ Summary:
 
 
 End of Report
-Completed execution in 7755 ms
+Completed execution in 5221 ms
 
