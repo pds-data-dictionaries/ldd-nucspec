@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 16 20:26:07 UTC 2022 -->
+  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.1.0.0 - Tue May 17 18:12:06 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -72,6 +72,20 @@
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('Data Glitch', 'Electron Burst', 'Gamma-ray Burst', 'SEP', 'Solar Flare')))) then false() else true()">
         <title>nucspec:Observing_Conditions/nucspec:condition_type/nucspec:condition_type</title>
         The attribute nucspec:Observing_Conditions/nucspec:condition_type must be nulled or equal to one of the following values 'Data Glitch', 'Electron Burst', 'Gamma-ray Burst', 'SEP', 'Solar Flare'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="nucspec:Time_Range_ET/nucspec:et_start">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
+        <title>nucspec:Time_Range_ET/nucspec:et_start/nucspec:et_start</title>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="nucspec:Time_Range_ET/nucspec:et_stop">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
+        <title>nucspec:Time_Range_ET/nucspec:et_stop/nucspec:et_stop</title>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

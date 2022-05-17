@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:nucspec  Version:1.0.0.0 - Mon May 16 20:26:07 UTC 2022 -->
+  <!-- PDS4 XML/Schema for Name Space Id:nucspec  Version:1.1.0.0 - Tue May 17 18:12:06 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.18.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 1.0.0.0 - nucspec: - nucspec                                              -->
+  <!-- 1.1.0.0 - nucspec: - nucspec                                              -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/nucspec/v1"
@@ -13,7 +13,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.0.0.0">
+    version="1.1.0.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd"/>
  
@@ -359,29 +359,45 @@ This dictionary covers nuclear spectroscopy observations.
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="et_start">
-    <xs:annotation>
-      <xs:documentation>The earliest ephemeris time, as defined by the
-        referenced field, for which this state or condition is
-        applicable.</xs:documentation>
-    </xs:annotation>
+  <xs:simpleType name="et_start_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="et_stop">
+  <xs:complexType name="et_start">
     <xs:annotation>
-      <xs:documentation>The latest ephemeris time, as defined by the
+      <xs:documentation>The earliest ephemeris time, as defined by the
         referenced field, for which this state or condition is
         applicable.</xs:documentation>
     </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nucspec:et_start_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="et_stop_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:complexType name="et_stop">
+    <xs:annotation>
+      <xs:documentation>The latest ephemeris time, as defined by the
+        referenced field, for which this state or condition is
+        applicable.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nucspec:et_stop_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="first_record">
     <xs:annotation>
