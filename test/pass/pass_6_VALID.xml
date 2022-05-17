@@ -72,8 +72,8 @@
               <nucspec:State_Time>
                 <nucspec:state_time_field_name>ET_MID</nucspec:state_time_field_name>
                 <nucspec:Time_Range_ET>
-                  <nucspec:et_start>479865543</nucspec:et_start>
-                  <nucspec:et_stop>479866000</nucspec:et_stop>
+                  <nucspec:et_start unit="s">479865543</nucspec:et_start>
+                  <nucspec:et_stop unit="s">479866000</nucspec:et_stop>
                 </nucspec:Time_Range_ET>
               </nucspec:State_Time>
             </nucspec:State_Table_Entry>
