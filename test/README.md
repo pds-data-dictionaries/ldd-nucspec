@@ -1,5 +1,4 @@
-# Failing Tests
+# Label Tests
 
-This directory contains labels that are expected to fail validation.
-
-They are named after the test that they are expected to fail.
+This directory contains unit tests for NucSpec. 
+The `pass` directory contains tests that should pass label validation, while the `fail` directory contains tests that should fail label validation. Additional descriptions are available in the README.md files in each of those directories.

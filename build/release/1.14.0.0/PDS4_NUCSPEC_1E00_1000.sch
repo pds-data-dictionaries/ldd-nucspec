@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Mon Nov 01 15:18:17 UTC 2021 -->
+  <!-- PDS4 Schematron for Name Space Id:nucspec  Version:1.0.0.0 - Wed May 11 18:32:25 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -22,7 +22,7 @@
     <sch:rule context="nucspec:State_Table/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = ('state_table_to_data_table')">
         <title>applicable_records_local_reference_type/Rule</title>
-        In the nucspec:Applicable_Records class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</sch:assert>
+        In the nucspec:State_Table class, the attribute pds:local_reference_type must be equal to 'state_table_to_data_table'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -75,6 +75,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="nucspec:Observing_Condition">
+      <sch:assert test="(nucspec:condition_source | nucspec:condition_active)">
+        <title>observing_condition_source_or_active/Rule</title>
+        In the nucspec:Observing_Condition class, condition_source and/or condition_active must be specified.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="nucspec:State_Table_Entry">
       <sch:let name="local_id" value="../pds:Local_Internal_Reference/pds:local_identifier_reference"/>
       <sch:assert test="//(pds:Table_Character | pds:Table_Delimited | pds:Table_Binary)[pds:local_identifier = $local_id]">
@@ -87,6 +94,13 @@
       <sch:assert test="pds:reference_type = ('nucspec_product_to_state_table')">
         <title>state_table_ref/Rule</title>
         In the nucspec:State_Table class, the attribute pds:reference_type must be equal to 'nucspec_product_to_state_table'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="nucspec:State_Table/pds:Local_Internal_Reference">
+      <sch:assert test="count(pds:local_identifier_reference) = 1">
+        <title>state_table_single_local_identfier_reference/Rule</title>
+        In the nucspec:State_Table class, the class pds:Local_Internal_Reference must contain only a single pds:local_identifier_reference.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

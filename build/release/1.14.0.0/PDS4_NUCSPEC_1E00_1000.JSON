@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.14.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "Mon Jun 07 18:44:39 UTC 2021" ,
+      "Date": "2022-05-11T11:32:25" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "nucspec:"] ,
       "classDictionary": [
@@ -316,7 +316,7 @@
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "This class specifies instrument settings. Instrument settings may be driven via a state table, which may be associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply."
+            "description": "This class specifies instrument settings. Instrument settings are driven via a state table, which are associated with specific observations within the data product, either by directly indicating those records, or indicating the observation times at which certain states apply."
               , "associationList": [
              {"association": {
                 "identifier": "0001_NASA_PDS_1.nucspec.Instrument_Settings.nucspec.State_Table" ,
@@ -433,14 +433,29 @@
                 "title": "condition_active" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
-                "isChoice": "true" ,
+                "isChoice": "false" ,
                 "isAny": "false" ,
-                "groupName": "XSChoice#14" ,
-                "minimumCardinality": "1" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.nucspec.Observing_Condition.nucspec.condition_active"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.nucspec.Observing_Condition.nucspec.condition_source" ,
+                "title": "condition_source" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.nucspec.Observing_Condition.nucspec.condition_active",
                   "0001_NASA_PDS_1.nucspec.Observing_Condition.nucspec.condition_source"
                  ]
               }
@@ -455,7 +470,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1040" ,
+                "classOrder": "1030" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.nucspec.Observing_Condition.nucspec.comment"
                  ]
@@ -468,10 +483,10 @@
                 "isAttribute": "false" ,
                 "isChoice": "true" ,
                 "isAny": "false" ,
-                "groupName": "XSChoice#15" ,
+                "groupName": "XSChoice#14" ,
                 "minimumCardinality": "1" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1060" ,
+                "classOrder": "1050" ,
                 "classId": [
                   "0001_NASA_PDS_1.nucspec.Time_Range_UTC",
                   "0001_NASA_PDS_1.nucspec.Time_Range_ET",
@@ -680,7 +695,7 @@
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "Associates individual observations in the data product with a record in the state table, providing additonal information on those observations."
+            "description": "Associates individual observations in the data product with a record in the state table, providing additional information on those observations."
               , "associationList": [
              {"association": {
                 "identifier": "0001_NASA_PDS_1.nucspec.State_Table_Entry.nucspec.state_index" ,
@@ -1491,7 +1506,7 @@
             "nameSpaceId": "nucspec" ,
             "steward": "sbn" ,
             "versionId": "1.14" ,
-            "description": "The earliest Universal Coordinated Time for which this state or condition is applicable." ,
+            "description": "The latest Universal Coordinated Time for which this state or condition is applicable." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
