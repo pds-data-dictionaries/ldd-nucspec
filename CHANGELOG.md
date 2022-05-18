@@ -4,7 +4,7 @@
 
 Initial creation
 
-## 2022-05-04 - Next Release (Non backwards-compatible)
+## 2022-05-18 - 1.1.0.0
 
 * Whitespace fixes
 * Minor documentation error fixes
