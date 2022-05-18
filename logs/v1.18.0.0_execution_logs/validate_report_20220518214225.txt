@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.2.0
-   Date                          2022-05-17T18:14:22Z
+   Date                          2022-05-18T21:42:27Z
 
 Parameters:
-   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/pass/pass_9_VALID.xml]
+   Targets                       [file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/pass/pass_12_VALID.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/67ce4abee63ef8981e433a7e9ce6db52af6fb60a/1.18.0.0/PDS4_NUCSPEC_1I00_1100.xsd, file:/tmp/PDS4_PDS_1I00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/67ce4abee63ef8981e433a7e9ce6db52af6fb60a/1.18.0.0/PDS4_NUCSPEC_1I00_1100.sch, file:/tmp/PDS4_PDS_1I00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/f92199bd7460ef97fa14e0ac01cfdd21faffa1ba/1.18.0.0/PDS4_NUCSPEC_1I00_1100.xsd, file:/tmp/PDS4_PDS_1I00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-nucspec/ldd-nucspec/build/development/f92199bd7460ef97fa14e0ac01cfdd21faffa1ba/1.18.0.0/PDS4_NUCSPEC_1I00_1100.sch, file:/tmp/PDS4_PDS_1I00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/pass/pass_9_VALID.xml
+  PASS: file:/home/runner/work/ldd-nucspec/ldd-nucspec/test/pass/pass_12_VALID.xml
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
         1 product validation(s) completed
 
@@ -45,5 +45,5 @@ Summary:
     1            warning.label.missing_schematron_spec
 
 End of Report
-Completed execution in 4733 ms
+Completed execution in 5032 ms
 
