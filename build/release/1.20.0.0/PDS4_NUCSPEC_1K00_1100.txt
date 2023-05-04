@@ -1,18 +1,18 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.1.2
+   LDDTool Version        14.2.3
    LDD Version Id:        1.1.0.0
-   LDD Label Version Id:  1.25
+   LDD Label Version Id:  1.26
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Oct 20 22:02:17 UTC 2022
-   Common Schema          [PDS4_PDS_1J00.xsd]
-   Common Schematron      [PDS4_PDS_1J00.sch]
-   IM Version Id:         1.19.0.0
+   Time                   Thu May 04 16:51:14 UTC 2023
+   Common Schema          [PDS4_PDS_1K00.xsd]
+   Common Schematron      [PDS4_PDS_1K00.sch]
+   IM Version Id:         1.20.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.25
+   IM Label Version Id:   1.26
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -51,107 +51,107 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   coefficient
-   version                1.19
+   version                1.20
    value data type        ASCII_Real
    description            The coefficient of a single term of the polynomial relating channel number to pulse height.
 
    name                   order
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The order of a single term of the polynomial relating channel number to pulse height.
 
    name                   state_index
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The state_index points to a row of a look up table containing the instrument settings.
    nillable               true
 
    name                   first_record
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The first record for which the state applies, inclusive.
    minimum value          1
 
    name                   last_record
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The last record for which this state applies, inclusive.
    minimum value          1
 
    name                   record_count
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The number of consecutive records, including the first, for which this state applies.
    minimum value          1
 
    name                   state_time_field_name
-   version                1.19
+   version                1.20
    value data type        UTF8_String
    description            The name of the field in the referenced data table that contains the time.
 
    name                   et_start
-   version                1.19
+   version                1.20
    value data type        ASCII_Real
    description            The earliest ephemeris time, as defined by the referenced field, for which this state or condition is applicable.
    unit of measure type   Units_of_Time
 
    name                   et_stop
-   version                1.19
+   version                1.20
    value data type        ASCII_Real
    description            The latest ephemeris time, as defined by the referenced field, for which this state or condition is applicable.
    unit of measure type   Units_of_Time
 
    name                   sclk_start_time
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The earliest spacecraft clock time, in ticks since spacecraft clock start, for which this state or condition is applicable.
    minimum value          0
 
    name                   sclk_stop_time
-   version                1.19
+   version                1.20
    value data type        ASCII_Integer
    description            The latest spacecraft clock time, in ticks since spacecraft clock start, for which this state or condition is applicable.
    minimum value          0
 
    name                   utc_start_time
-   version                1.19
+   version                1.20
    value data type        ASCII_Date_Time_YMD_UTC
    description            The earliest Universal Coordinated Time for which this state or condition is applicable.
 
    name                   utc_stop_time
-   version                1.19
+   version                1.20
    value data type        ASCII_Date_Time_YMD_UTC
    description            The latest Universal Coordinated Time for which this state or condition is applicable.
 
    name                   name
-   version                1.19
+   version                1.20
    value data type        UTF8_Short_String_Collapsed
    description            The name of the detector.
 
    name                   description
-   version                1.19
+   version                1.20
    value data type        UTF8_Text_Preserved
    description            A description for the detector.
 
    name                   comment
-   version                1.19
+   version                1.20
    value data type        UTF8_Text_Preserved
    description            Any notes about the state at the time of observation.
 
    name                   condition_type
-   version                1.19
+   version                1.20
    value data type        ASCII_Short_String_Collapsed
    description            Remarks about the containing object.
    nillable               true
 
    name                   condition_active
-   version                1.19
+   version                1.20
    value data type        ASCII_Boolean
    description            A flag indicating whether the condition was in effect at the given time.
    nillable               true
 
    name                   condition_source
-   version                1.19
+   version                1.20
    value data type        ASCII_Short_String_Collapsed
    description            A string identifying the source of the condition at the given time.
    nillable               true
@@ -166,22 +166,22 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      Energy_Calibration
+      local identifier      nucspec:Energy_Calibration
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Instrument_Settings
+      local identifier      nucspec:Instrument_Settings
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Detectors
+      local identifier      nucspec:Detectors
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Observing_Conditions
+      local identifier      nucspec:Observing_Conditions
       minimum occurrences   0
       maximum occurrences   unbounded
       reference type        component_of
@@ -194,12 +194,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      Polynomial
+      local identifier      nucspec:Polynomial
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Calibration_Reference
+      local identifier      nucspec:Calibration_Reference
       minimum occurrences   0
       maximum occurrences   unbounded
       reference type        component_of
@@ -225,7 +225,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      State_Table
+      local identifier      nucspec:State_Table
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -238,7 +238,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      Polynomial_Term
+      local identifier      nucspec:Polynomial_Term
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -251,12 +251,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      order
+      local identifier      nucspec:order
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      coefficient
+      local identifier      nucspec:coefficient
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -279,7 +279,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      State_Table_Entry
+      local identifier      nucspec:State_Table_Entry
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -292,22 +292,22 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      state_index
+      local identifier      nucspec:state_index
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      comment
+      local identifier      nucspec:comment
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      Applicable_Records
+      local identifier      nucspec:Applicable_Records
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      State_Time
+      local identifier      nucspec:State_Time
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -320,12 +320,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      First_Last
+      local identifier      nucspec:First_Last
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      First_Count
+      local identifier      nucspec:First_Count
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -338,22 +338,22 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      state_time_field_name
+      local identifier      nucspec:state_time_field_name
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      Time_Range_ET
+      local identifier      nucspec:Time_Range_ET
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Time_Range_SCLK
+      local identifier      nucspec:Time_Range_SCLK
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Time_Range_UTC
+      local identifier      nucspec:Time_Range_UTC
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -366,12 +366,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      first_record
+      local identifier      nucspec:first_record
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      last_record
+      local identifier      nucspec:last_record
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -384,12 +384,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      first_record
+      local identifier      nucspec:first_record
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      record_count
+      local identifier      nucspec:record_count
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -402,7 +402,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      Detector
+      local identifier      nucspec:Detector
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -415,17 +415,17 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      name
+      local identifier      nucspec:name
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      description
+      local identifier      nucspec:description
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      comment
+      local identifier      nucspec:comment
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -438,12 +438,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      et_start
+      local identifier      nucspec:et_start
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      et_stop
+      local identifier      nucspec:et_stop
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -456,12 +456,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      sclk_start_time
+      local identifier      nucspec:sclk_start_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      sclk_stop_time
+      local identifier      nucspec:sclk_stop_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -474,12 +474,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      utc_start_time
+      local identifier      nucspec:utc_start_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      utc_stop_time
+      local identifier      nucspec:utc_stop_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -492,12 +492,12 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      condition_type
+      local identifier      nucspec:condition_type
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      Observing_Condition
+      local identifier      nucspec:Observing_Condition
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        component_of
@@ -510,32 +510,32 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      condition_active
+      local identifier      nucspec:condition_active
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      condition_source
+      local identifier      nucspec:condition_source
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      comment
+      local identifier      nucspec:comment
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      Time_Range_UTC
+      local identifier      nucspec:Time_Range_UTC
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Time_Range_ET
+      local identifier      nucspec:Time_Range_ET
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Time_Range_SCLK
+      local identifier      nucspec:Time_Range_SCLK
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
