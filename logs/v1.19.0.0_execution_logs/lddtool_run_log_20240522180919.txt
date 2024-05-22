@@ -1,12 +1,10 @@
 
->>  INFO LDDTOOL Version: 14.3.0
+>>  INFO LDDTOOL Version: 15.0.6
 >>  INFO IM Version Id: 1.19.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.25
->>  INFO Date: Thu Nov 02 23:34:14 UTC 2023
->>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
->>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
->>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+>>  INFO Date: Wed May 22 18:09:19 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.0.6/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:nucspec
 >>> INFO Init:  - Config.Properties Namespace Id Using:nucspec

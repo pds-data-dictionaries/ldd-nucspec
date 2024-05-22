@@ -1,12 +1,10 @@
 
->>  INFO LDDTOOL Version: 14.3.0
->>  INFO IM Version Id: 1.18.0.0
+>>  INFO LDDTOOL Version: 15.0.6
+>>  INFO IM Version Id: 1.20.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.24
->>  INFO Date: Thu Nov 02 23:34:11 UTC 2023
->>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
->>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
->>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+>>  INFO IM Label Version Id: 1.26
+>>  INFO Date: Wed May 22 18:09:18 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.0.6/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:nucspec
 >>> INFO Init:  - Config.Properties Namespace Id Using:nucspec
@@ -47,7 +45,7 @@
 
 Input:
 
-     - IM Version: 1I00
+     - IM Version: 1K00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -57,9 +55,9 @@ Input:
 
 Output:
 
-     - ./PDS4_NUCSPEC_1I00_1100.xsd
-     - ./PDS4_NUCSPEC_1I00_1100.sch
-     - ./PDS4_NUCSPEC_1I00_1100.xml
-     - ./export/JSON/PDS4_PDS_1I00.JSON
+     - ./PDS4_NUCSPEC_1K00_1100.xsd
+     - ./PDS4_NUCSPEC_1K00_1100.sch
+     - ./PDS4_NUCSPEC_1K00_1100.xml
+     - ./export/JSON/PDS4_PDS_1K00.JSON
 
 >>  INFO Exit(0)
