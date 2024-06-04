@@ -711,16 +711,6 @@ The record numbers are one-based and inclusive.</definition>
   </DD_Rule>
 
   <DD_Rule>
-    <local_identifier>first_last_ordering</local_identifier>
-    <rule_context>nucspec:First_Last</rule_context>
-    <DD_Rule_Statement>
-      <rule_type>Assert</rule_type>
-      <rule_test>nucspec:last_record >= nucspec:first_record</rule_test>
-      <rule_message>In the nucspec:First_Last class, the index of the last record must be greater than or equal to the index of the first record.</rule_message>
-    </DD_Rule_Statement>
-  </DD_Rule>
-
-  <DD_Rule>
     <local_identifier>last_bounds_check</local_identifier>
     <rule_context>nucspec:First_Last</rule_context>
     <rule_assign>name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
@@ -731,6 +721,11 @@ The record numbers are one-based and inclusive.</definition>
       <rule_test>$record_count >= $last_record</rule_test>
       <rule_message>In the nucspec:First_Last class, the index of the last record (&lt;sch:value-of select='$last_record'/&gt;) must be less than or equal to the record count of the referenced table (&lt;sch:value-of select='$record_count'/&gt;).</rule_message>
       <rule_description>In the nucspec:First_Last class, the index of the last record must be less than or equal to the record count of the referenced table.</rule_description>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>nucspec:last_record >= nucspec:first_record</rule_test>
+      <rule_message>In the nucspec:First_Last class, the index of the last record must be greater than or equal to the index of the first record.</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
 
