@@ -712,7 +712,7 @@ The record numbers are one-based and inclusive.</definition>
 
   <DD_Rule>
     <local_identifier>first_last_ordering</local_identifier>
-    <rule_context>nucspec:First_Last</rule_context>
+    <rule_context>nucspec:First_Last[nucspec:first_record]</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>nucspec:last_record >= nucspec:first_record</rule_test>
@@ -722,7 +722,7 @@ The record numbers are one-based and inclusive.</definition>
 
   <DD_Rule>
     <local_identifier>last_bounds_check</local_identifier>
-    <rule_context>nucspec:First_Last</rule_context>
+    <rule_context>nucspec:First_Last[nucspec:last_record]</rule_context>
     <rule_assign>name="local_id" value="../../../pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
     <rule_assign>name="record_count" value="number(//*[pds:local_identifier=$local_id]/pds:records)"</rule_assign>
     <rule_assign>name="last_record" value="number(nucspec:last_record)"</rule_assign>
