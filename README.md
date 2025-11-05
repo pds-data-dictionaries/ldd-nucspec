@@ -13,7 +13,7 @@ Steward: [Jesse Stone, SBN](@jstone-psi)
 
 <!-- UPDATE NEEDED - the URL to have #namespace-id, e.g. #disp, #geom, etc. -->
 * [PDS Namespace](https://pds.nasa.gov/datastandards/dictionaries/#nucspec)
-* [GitHub](https://github.com/pds-data-dictionaries/ldd-nucspec/releases/latest) (broken link)
+* [GitHub](https://github.com/pds-data-dictionaries/ldd-nucspec/releases/latest)
 * [Change log](CHANGELOG.md)
 
 
@@ -26,7 +26,3 @@ See the review notes for the Nuclear Spectroscopy dictionary at (https://sbn.psi
 
 Have a bug or feature request? Create one in the [PDS4 Issue Repo](https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose).
 
-
-# Developer Support
-
-[For more information](src/README.md)
