@@ -7,15 +7,14 @@ Steward: [Jesse Stone, SBN](@jstone-psi)
 # Documentation
 
 * [User Guide](docs/NucSpec_Users_Guide20200924.pdf) ([Editable](https://docs.google.com/document/d/1rI20kFqCNkeI7uGlxpza2yZ2zeXVnCCC_Lsp0hLkmJ4/edit#heading=h.gjdgxs))
-* [Detailed Documentation](docs) (to be created)
 * [Other PDS Namespace Documentation](https://pds-data-dictionaries.github.io/)
 
 # Latest Release
 
 <!-- UPDATE NEEDED - the URL to have #namespace-id, e.g. #disp, #geom, etc. -->
 * [PDS Namespace](https://pds.nasa.gov/datastandards/dictionaries/#nucspec)
-* [GitHub](../../../releases/latest) (broken link)
-* [Change log](CHANGELOG.md) (broken link)
+* [GitHub](https://github.com/pds-data-dictionaries/ldd-nucspec/releases/latest) (broken link)
+* [Change log](CHANGELOG.md)
 
 
 # Review
