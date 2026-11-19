@@ -1,0 +1,65 @@
+
+>>  INFO LDDTOOL Version: 16.3.2
+>>  INFO IM Version Id: 1.25.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.0
+>>  INFO Date: Thu Nov 19 22:34:32 UTC 2026
+>>  INFO PARENT_DIR: /tmp/lddtool-16.3.2/Data/
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:nucspec
+>>> INFO Init:  - Config.Properties Namespace Id Using:nucspec
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <condition_active> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <condition_source> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <first_record> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <last_record> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <record_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <sclk_start_time> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <sclk_stop_time> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <comment> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> WARNING Rule: <state_table_single_local_identfier_reference> - The rule_context 'nucspec:State_Table/pds:Local_Internal_Reference' is already used by rule <applicable_records_local_reference_type> in this local data dictionary. Rules are not merged; only the first rule is used. Combine the DD_Rule_Statements into a single DD_Rule.
+>>> WARNING Rule: <last_bounds_check> - The rule_context 'nucspec:First_Last' is already used by rule <first_last_ordering> in this local data dictionary. Rules are not merged; only the first rule is used. Combine the DD_Rule_Statements into a single DD_Rule.
+
+ -- LDDTool Execution Summary --
+     2 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1P00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-nucspec/ldd-nucspec/src/PDS4_NUCSPEC_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_NUCSPEC_1P00_1100.xsd
+     - ./PDS4_NUCSPEC_1P00_1100.sch
+     - ./PDS4_NUCSPEC_1P00_1100.xml
+     - ./export/PDS4_PDS_1P00.JSON
+
+>>  INFO Exit(0)
